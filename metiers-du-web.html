@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Métiers du Web</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"> 
+
+</head>
+<body>
+
+  <!-- ─── NAVIGATION ─── -->
+  <nav>
+    <a href="index.html" class="nav-logo">&#60;/Mon Stage&#62;</a>
+    <ul class="nav-links">
+      <li><a href="index.html" >Accueil</a></li>
+      <li><a href="histoires-web.html">L'histoire du web</a></li>
+      <li><a href="HTML-CSS-JS.html">Les langages</a></li>
+      <li><a href="architecture-web.html">Le WEB</a></li>
+      <li><a href="metiers-du-web.html" class="active">Les métiers</a></li>
+      <li><a href="remerciements.html">Remerciements</a></li>
+    </ul>
+  </nav>
+
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-badge">
+            <span class="header-badge-dot"></span>
+            Soutenance de stage 3ème
+        </div>
+        <h1>
+            <span class="line1">Les métiers qui</span>
+            <span class="line2">construisent le Web</span>
+        </h1>
+        <p class="header-sub">
+            Derrière chaque site internet, une équipe de professionnels aux compétences complémentaires. 
+            Clique sur un métier pour en savoir plus !
+        </p>
+        <div class="header-stats">
+            <div class="stat-item">
+                <div class="stat-num">7</div>
+                <div class="stat-label">Métiers</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">3</div>
+                <div class="stat-label">Familles</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">∞</div>
+                <div class="stat-label">Possibilités</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- FILTRE -->
+    <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">✦ Tous</button>
+        <button class="filter-btn" data-filter="tech">⚙️ Technique</button>
+        <button class="filter-btn" data-filter="design">🎨 Design</button>
+        <button class="filter-btn" data-filter="contenu">✍️ Contenu & Marketing</button>
+    </div>
+
+    <!-- GRILLE DE CARTES -->
+    <div class="cards-grid" id="cardsGrid">
+
+        <!-- 1. Développeur Front-end -->
+        <div class="card" style="--card-color: #4f9cf7" data-category="tech" data-job="frontend">
+            <div class="card-stripe"></div>
+            <div class="card-inner">
+                <div class="card-head">
+                    <div class="card-icon">🖥️</div>
+                    <div class="card-title-group">
+                        <div class="card-title">Développeur Front-end</div>
+                        <div class="card-tags">
+                            <span class="tag">Technique</span>
+                            <span class="tag">Visuel</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="card-desc">
+                    Il construit la partie visible d'un site web : tout ce que l'utilisateur voit et avec quoi il interagit directement dans son navigateur.
+                </p>
+                <div class="card-skills">
+                    <span class="skill-chip">HTML</span>
+                    <span class="skill-chip">CSS</span>
+                    <span class="skill-chip">JavaScript</span>
+                    <span class="skill-chip">React</span>
+                    <span class="skill-chip">Tailwind</span>
+                </div>
+                <div class="card-footer">
+                    <div class="card-salary">Salaire : <span>30 – 55k€/an</span></div>
+                    <div class="card-cta">Découvrir <span class="card-cta-arrow">→</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Développeur Back-end -->
+        <div class="card" style="--card-color: #ff8c42" data-category="tech" data-job="backend">
+            <div class="card-stripe"></div>
+            <div class="card-inner">
+                <div class="card-head">
+                    <div class="card-icon">⚙️</div>
+                    <div class="card-title-group">
+                        <div class="card-title">Développeur Back-end</div>
+                        <div class="card-tags">
+                            <span class="tag">Technique</span>
+                            <span class="tag">Serveur</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="card-desc">
+                    Il programme "l'invisible" : les serveurs, les bases de données et toute la logique qui fait fonctionner un site en arrière-plan.
+                </p>
+                <div class="card-skills">
+                    <span class="skill-chip">PHP</span>
+                    <span class="skill-chip">Python</span>
+                    <span class="skill-chip">MySQL</span>
+                    <span class="skill-chip">API REST</span>
+                    <span class="skill-chip">Symfony</span>
+                </div>
+                <div class="card-footer">
+                    <div class="card-salary">Salaire : <span>35 – 60k€/an</span></div>
+                    <div class="card-cta">Découvrir <span class="card-cta-arrow">→</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Designer UX/UI -->
+        <div class="card" style="--card-color: #a855f7" data-category="design" data-job="uxui">
+            <div class="card-stripe"></div>
+            <div class="card-inner">
+                <div class="card-head">
+                    <div class="card-icon">🎨</div>
+                    <div class="card-title-group">
+                        <div class="card-title">Designer UX/UI</div>
+                        <div class="card-tags">
+                            <span class="tag">Design</span>
+                            <span class="tag">Créatif</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="card-desc">
+                    Il conçoit l'apparence et l'expérience d'un site. L'UX pense à la facilité d'utilisation, l'UI à la beauté visuelle.
+                </p>
+                <div class="card-skills">
+                    <span class="skill-chip">Figma</span>
+                    <span class="skill-chip">Wireframe</span>
+                    <span class="skill-chip">Prototype</span>
+                    <span class="skill-chip">Design System</span>
+                </div>
+                <div class="card-footer">
+                    <div class="card-salary">Salaire : <span>32 – 55k€/an</span></div>
+                    <div class="card-cta">Découvrir <span class="card-cta-arrow">→</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. SEO / Référenceur -->
+        <div class="card" style="--card-color: #1ED35A" data-category="contenu" data-job="seo">
+            <div class="card-stripe"></div>
+            <div class="card-inner">
+                <div class="card-head">
+                    <div class="card-icon">🔍</div>
+                    <div class="card-title-group">
+                        <div class="card-title">SEO / Référenceur</div>
+                        <div class="card-tags">
+                            <span class="tag">Marketing</span>
+                            <span class="tag">Visibilité</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="card-desc">
+                    Il optimise un site pour qu'il apparaisse en premier sur Google. Sans lui, un super site peut rester invisible sur internet !
+                </p>
+                <div class="card-skills">
+                    <span class="skill-chip">Google Search</span>
+                    <span class="skill-chip">Mots-clés</span>
+                    <span class="skill-chip">Backlinks</span>
+                    <span class="skill-chip">Analytics</span>
+                </div>
+                <div class="card-footer">
+                    <div class="card-salary">Salaire : <span>28 – 50k€/an</span></div>
+                    <div class="card-cta">Découvrir <span class="card-cta-arrow">→</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. Web Marketeur -->
+        <div class="card" style="--card-color: #f472b6" data-category="contenu" data-job="marketing">
+            <div class="card-stripe"></div>
+            <div class="card-inner">
+                <div class="card-head">
+                    <div class="card-icon">📊</div>
+                    <div class="card-title-group">
+                        <div class="card-title">Web Marketeur</div>
+                        <div class="card-tags">
+                            <span class="tag">Marketing</span>
+                            <span class="tag">Stratégie</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="card-desc">
+                    Il crée des stratégies pour attirer des visiteurs, les convertir en clients et fidéliser l'audience d'un site web.
+                </p>
+                <div class="card-skills">
+                    <span class="skill-chip">Google Ads</span>
+                    <span class="skill-chip">Réseaux sociaux</span>
+                    <span class="skill-chip">Email marketing</span>
+                    <span class="skill-chip">KPIs</span>
+                </div>
+                <div class="card-footer">
+                    <div class="card-salary">Salaire : <span>28 – 52k€/an</span></div>
+                    <div class="card-cta">Découvrir <span class="card-cta-arrow">→</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. Copywriter -->
+        <div class="card" style="--card-color: #fbbf24" data-category="contenu" data-job="copywriter">
+            <div class="card-stripe"></div>
+            <div class="card-inner">
+                <div class="card-head">
+                    <div class="card-icon">✍️</div>
+                    <div class="card-title-group">
+                        <div class="card-title">Copywriter</div>
+                        <div class="card-tags">
+                            <span class="tag">Rédaction</span>
+                            <span class="tag">Persuasion</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="card-desc">
+                    Il rédige les textes qui donnent envie d'agir : boutons, slogans, publicités... Son but : convaincre en quelques mots.
+                </p>
+                <div class="card-skills">
+                    <span class="skill-chip">Storytelling</span>
+                    <span class="skill-chip">Psychologie</span>
+                    <span class="skill-chip">A/B testing</span>
+                    <span class="skill-chip">CTA</span>
+                </div>
+                <div class="card-footer">
+                    <div class="card-salary">Salaire : <span>25 – 48k€/an</span></div>
+                    <div class="card-cta">Découvrir <span class="card-cta-arrow">→</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. Rédacteur Web -->
+        <div class="card" style="--card-color: #22d3ee" data-category="contenu" data-job="redacteur">
+            <div class="card-stripe"></div>
+            <div class="card-inner">
+                <div class="card-head">
+                    <div class="card-icon">📝</div>
+                    <div class="card-title-group">
+                        <div class="card-title">Rédacteur Web</div>
+                        <div class="card-tags">
+                            <span class="tag">Contenu</span>
+                            <span class="tag">SEO</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="card-desc">
+                    Il écrit les articles, guides et pages d'un site web. Il combine la qualité rédactionnelle avec les règles du SEO pour être lu ET trouvé.
+                </p>
+                <div class="card-skills">
+                    <span class="skill-chip">Rédaction SEO</span>
+                    <span class="skill-chip">HTML basique</span>
+                    <span class="skill-chip">Balises Hn</span>
+                    <span class="skill-chip">Recherche</span>
+                </div>
+                <div class="card-footer">
+                    <div class="card-salary">Salaire : <span>22 – 42k€/an</span></div>
+                    <div class="card-cta">Découvrir <span class="card-cta-arrow">→</span></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="modal">
+            <div class="modal-banner" id="modalBanner"></div>
+            <button class="modal-close" id="modalClose">✕</button>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <nav class="footer-nav">
+        <a href="index.html">Accueil</a>
+        <a href="histoires-web.html">L'histoire du web</a>
+        <a href="HTML-CSS-JS.html">Les langages</a>
+        <a href="architecture-web.html">Le WEB</a>
+        <a href="metiers-du-web.html">Les métiers</a>
+        <a href="remerciements.html">Remerciements</a>
+      </nav>
+      <p class="footer-copy">Fait avec <span>♥</span> dans le cadre de mon stage de troisième &nbsp;·&nbsp; 2025/2026</p>
+    </footer>
+
+    <script>
+    // =========================================================
+    // DONNÉES DÉTAILLÉES DE CHAQUE MÉTIER
+    // =========================================================
+    const jobsData = {
+
+        frontend: {
+            color: '#4f9cf7',
+            icon: '🖥️',
+            title: 'Développeur Front-end',
+            tags: ['Technique', 'Visuel'],
+            desc: `Le développeur front-end est celui qui traduit les maquettes du designer en vrai site web fonctionnel. 
+                   Il travaille directement avec les langages que le navigateur comprend : HTML pour la structure, 
+                   CSS pour le style, et JavaScript pour les animations et interactions. C'est le pont entre le design et le code.`,
+            activities: [
+                'Coder des pages web à partir de maquettes Figma ou Photoshop',
+                'Créer des animations et effets visuels avec CSS et JavaScript',
+                'S\'assurer que le site fonctionne sur mobile, tablette et PC (responsive design)',
+                'Optimiser la vitesse de chargement des pages',
+                'Collaborer étroitement avec le développeur back-end pour connecter le site au serveur',
+                'Tester et corriger les bugs d\'affichage sur différents navigateurs',
+            ],
+            skills: [
+                { icon: '📄', name: 'HTML5' },
+                { icon: '🎨', name: 'CSS3 / Tailwind' },
+                { icon: '⚡', name: 'JavaScript' },
+                { icon: '⚛️', name: 'React / Vue.js' },
+                { icon: '📐', name: 'Figma (lecture)' },
+                { icon: '🔧', name: 'Git / GitHub' },
+            ],
+            salary: '30 000 – 55 000 €/an',
+            salaryPct: 60,
+            funFact: '🌍 Il y a <strong>plus de 1,9 milliard de sites web</strong> sur internet aujourd\'hui. Chacun a eu besoin d\'un développeur front-end pour exister !',
+        },
+
+        backend: {
+            color: '#ff8c42',
+            icon: '⚙️',
+            title: 'Développeur Back-end',
+            tags: ['Technique', 'Serveur'],
+            desc: `Le développeur back-end programme tout ce qui est invisible pour l'utilisateur mais indispensable au fonctionnement du site. 
+                   Il gère les serveurs, les bases de données, et la logique métier. C'est lui qui fait en sorte que quand tu te connectes à 
+                   Instagram, tu vois TES photos et pas celles de quelqu'un d'autre !`,
+            activities: [
+                'Créer et gérer les bases de données (MySQL, PostgreSQL)',
+                'Programmer les API que le front-end utilise pour récupérer des données',
+                'Gérer l\'authentification des utilisateurs (connexion, mot de passe, sécurité)',
+                'Optimiser les requêtes SQL pour que le site soit rapide',
+                'Déployer et maintenir les serveurs web (Apache, Nginx)',
+                'Sécuriser le site contre les attaques (injections SQL, XSS...)',
+            ],
+            skills: [
+                { icon: '🐘', name: 'PHP / Symfony' },
+                { icon: '🐍', name: 'Python / Django' },
+                { icon: '🗄️', name: 'MySQL / PostgreSQL' },
+                { icon: '🔗', name: 'API REST' },
+                { icon: '🔒', name: 'Sécurité web' },
+                { icon: '🖥️', name: 'Linux / Serveurs' },
+            ],
+            salary: '35 000 – 60 000 €/an',
+            salaryPct: 68,
+            funFact: '🔐 Quand tu te connectes à un site, le back-end vérifie ton mot de passe en <strong>moins de 100 millisecondes</strong>. Et il ne stocke jamais ton vrai mot de passe — seulement son "empreinte" (hash) !',
+        },
+
+        uxui: {
+            color: '#a855f7',
+            icon: '🎨',
+            title: 'Designer UX/UI',
+            tags: ['Design', 'Créatif'],
+            desc: `Le designer UX/UI a un double rôle. L'UX (User Experience) consiste à penser comment les gens vont utiliser le site pour le rendre 
+                   le plus simple et agréable possible. L'UI (User Interface) consiste à le rendre beau visuellement. 
+                   C'est lui qui crée les maquettes avant que les développeurs codent.`,
+            activities: [
+                'Réaliser des wireframes (croquis) pour organiser les pages',
+                'Créer des maquettes visuelles haute-fidélité sur Figma',
+                'Faire des tests utilisateurs pour voir si le site est facile à comprendre',
+                'Définir la charte graphique (couleurs, typographies, icônes)',
+                'Créer un Design System (bibliothèque de composants réutilisables)',
+                'Travailler en étroite collaboration avec les développeurs front-end',
+            ],
+            skills: [
+                { icon: '🖊️', name: 'Figma' },
+                { icon: '📐', name: 'Wireframing' },
+                { icon: '🎭', name: 'Prototypage' },
+                { icon: '🌈', name: 'Théorie des couleurs' },
+                { icon: '🧠', name: 'Psychologie UX' },
+                { icon: '🔬', name: 'Tests utilisateurs' },
+            ],
+            salary: '32 000 – 55 000 €/an',
+            salaryPct: 62,
+            funFact: '⏱️ Il faut seulement <strong>50 millisecondes</strong> à un utilisateur pour se faire une première impression d\'un site web. Le designer UX/UI a donc 50ms pour convaincre !',
+        },
+
+        seo: {
+            color: '#1ED35A',
+            icon: '🔍',
+            title: 'SEO / Référenceur',
+            tags: ['Marketing', 'Visibilité'],
+            desc: `Le référenceur SEO (Search Engine Optimization) fait en sorte qu'un site web apparaisse en haut des résultats Google. 
+                   Sans lui, même le plus beau site du monde peut rester invisible ! Il comprend à la fois la technique, 
+                   le contenu et la popularité d'un site.`,
+            activities: [
+                'Rechercher les mots-clés que les gens tapent sur Google',
+                'Optimiser le code HTML pour que Google comprenne mieux le site',
+                'Analyser les statistiques de trafic avec Google Analytics',
+                'Construire des liens vers le site depuis d\'autres sites (backlinks)',
+                'Rédiger des recommandations pour améliorer le contenu',
+                'Surveiller les positions du site sur les mots-clés cibles',
+            ],
+            skills: [
+                { icon: '🔑', name: 'Recherche de mots-clés' },
+                { icon: '📊', name: 'Google Analytics' },
+                { icon: '🔗', name: 'Link Building' },
+                { icon: '📱', name: 'SEO technique' },
+                { icon: '✍️', name: 'Contenu SEO' },
+                { icon: '🛠️', name: 'Search Console' },
+            ],
+            salary: '28 000 – 50 000 €/an',
+            salaryPct: 52,
+            funFact: '📈 <strong>75% des internautes</strong> ne cliquent jamais sur la 2ème page de Google. Si un site n\'est pas en page 1, il est pratiquement invisible !',
+        },
+
+        marketing: {
+            color: '#f472b6',
+            icon: '📊',
+            title: 'Web Marketeur',
+            tags: ['Marketing', 'Stratégie'],
+            desc: `Le web marketeur crée et gère des campagnes pour attirer des visiteurs sur un site et les transformer en clients. 
+                   Il utilise plusieurs canaux : réseaux sociaux, publicité en ligne, emailing... 
+                   Son outil principal : les données, pour comprendre ce qui fonctionne et optimiser en permanence.`,
+            activities: [
+                'Créer et gérer des campagnes publicitaires sur Google Ads et Facebook Ads',
+                'Piloter les réseaux sociaux (Instagram, LinkedIn, TikTok...)',
+                'Concevoir des campagnes d\'emailing pour fidéliser les clients',
+                'Analyser les statistiques pour mesurer le retour sur investissement',
+                'Créer des landing pages (pages d\'atterrissage) qui convertissent',
+                'Définir la stratégie de contenu du site',
+            ],
+            skills: [
+                { icon: '📢', name: 'Google Ads' },
+                { icon: '📱', name: 'Social Media' },
+                { icon: '📧', name: 'Email Marketing' },
+                { icon: '📉', name: 'Analytics / KPIs' },
+                { icon: '🎯', name: 'Conversion Rate' },
+                { icon: '💡', name: 'Content Strategy' },
+            ],
+            salary: '28 000 – 52 000 €/an',
+            salaryPct: 55,
+            funFact: '💸 Pour chaque 1€ investi en email marketing, les entreprises récupèrent en moyenne <strong>36€ de retour</strong> ! C\'est l\'un des meilleurs retours sur investissement du marketing digital.',
+        },
+
+        copywriter: {
+            color: '#fbbf24',
+            icon: '✍️',
+            title: 'Copywriter',
+            tags: ['Rédaction', 'Persuasion'],
+            desc: `Le copywriter est un "vendeur en mots". Il rédige des textes dont l'objectif est de faire agir le lecteur : 
+                   cliquer sur un bouton, acheter un produit, s'inscrire à une newsletter... 
+                   Il mélange psychologie, créativité et technique pour écrire des textes qui convertissent.`,
+            activities: [
+                'Rédiger les slogans, accroches et titres d\'une page web',
+                'Écrire les textes des boutons d\'appel à l\'action (CTA)',
+                'Créer des publicités pour Google, Facebook, Instagram',
+                'Rédiger des séquences d\'emails marketing automatisées',
+                'Faire des A/B tests pour savoir quelle formulation est la plus efficace',
+                'Adapter le ton et le style selon la cible et la plateforme',
+            ],
+            skills: [
+                { icon: '📖', name: 'Storytelling' },
+                { icon: '🧠', name: 'Psychologie persuasive' },
+                { icon: '🔬', name: 'A/B Testing' },
+                { icon: '🎯', name: 'Rédaction CTA' },
+                { icon: '📊', name: 'Analyse de données' },
+                { icon: '🌐', name: 'SEO de base' },
+            ],
+            salary: '25 000 – 48 000 €/an',
+            salaryPct: 48,
+            funFact: '💬 Le bouton "<strong>Essai gratuit</strong>" converti jusqu\'à <strong>3x plus</strong> que le bouton "S\'inscrire" pour exactement la même action. Les mots font toute la différence !',
+        },
+
+        redacteur: {
+            color: '#22d3ee',
+            icon: '📝',
+            title: 'Rédacteur Web',
+            tags: ['Contenu', 'SEO'],
+            desc: `Le rédacteur web crée le contenu textuel des sites : articles de blog, fiches produit, pages d'information... 
+                   Contrairement au rédacteur classique, il doit écrire pour deux audiences simultanément : 
+                   les humains (pour être lu et apprécié) ET les robots de Google (pour être bien référencé).`,
+            activities: [
+                'Rédiger des articles de blog optimisés pour le SEO',
+                'Écrire des fiches produits pour les sites e-commerce',
+                'Structurer le contenu avec des titres HTML (H1, H2, H3...)',
+                'Intégrer naturellement les mots-clés dans le texte',
+                'Créer du contenu adapté à chaque réseau social',
+                'Mettre à jour le contenu existant pour améliorer le référencement',
+            ],
+            skills: [
+                { icon: '✒️', name: 'Rédaction SEO' },
+                { icon: '🏗️', name: 'Structure HTML Hn' },
+                { icon: '🔍', name: 'Mots-clés' },
+                { icon: '📚', name: 'Vulgarisation' },
+                { icon: '🔎', name: 'Recherche documentaire' },
+                { icon: '📸', name: 'Alt text images' },
+            ],
+            salary: '22 000 – 42 000 €/an',
+            salaryPct: 40,
+            funFact: '📝 Google indexe <strong>plus de 100 milliards de pages web</strong>. Un bon rédacteur web sait exactement quoi écrire pour que sa page soit trouvée parmi toutes ces milliards d\'autres !',
+        },
+    };
+
+    // =========================================================
+    // OUVERTURE DU MODAL
+    // =========================================================
+    function openModal(jobKey) {
+        const job = jobsData[jobKey];
+        if (!job) return;
+
+        const overlay = document.getElementById('modalOverlay');
+        const modalBanner = document.getElementById('modalBanner');
+        const modalBody = document.getElementById('modalBody');
+        const modal = document.getElementById('modal');
+
+        // Style de couleur pour le modal
+        modal.style.setProperty('--modal-color', job.color);
+        modal.style.borderColor = job.color + '44';
+        modalBanner.style.background = `linear-gradient(90deg, ${job.color}, ${job.color}88)`;
+
+        // Tags HTML
+        const tagsHtml = job.tags.map(t =>
+            `<span class="tag" style="--card-color:${job.color}">${t}</span>`
+        ).join('');
+
+        // Activités HTML
+        const activitiesHtml = job.activities.map(a =>
+            `<li>${a}</li>`
+        ).join('');
+
+        // Compétences HTML
+        const skillsHtml = job.skills.map(s =>
+            `<div class="modal-skill-item">
+                <span class="skill-icon">${s.icon}</span>
+                <span>${s.name}</span>
+            </div>`
+        ).join('');
+
+        // Construction du contenu du modal
+        modalBody.innerHTML = `
+            <div class="modal-head">
+                <div class="modal-icon" style="background: ${job.color}20; border: 1px solid ${job.color}40; font-size:2.2rem">
+                    ${job.icon}
+                </div>
+                <div>
+                    <div class="modal-title">${job.title}</div>
+                    <div class="modal-tags">${tagsHtml}</div>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">C'est quoi ce métier ?</div>
+                <p class="modal-desc-full">${job.desc}</p>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">Au quotidien</div>
+                <ul class="activities-list">${activitiesHtml}</ul>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">Compétences clés</div>
+                <div class="modal-skills-grid">${skillsHtml}</div>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">Salaire en France</div>
+                <div class="salary-bar-wrap">
+                    <div class="salary-range">
+                        <span class="salary-label">Débutant → Expérimenté</span>
+                        <span class="salary-amount" style="color:${job.color}">${job.salary}</span>
+                    </div>
+                    <div class="salary-bar">
+                        <div class="salary-bar-fill" id="salaryFill"
+                             style="background: linear-gradient(90deg, ${job.color}88, ${job.color}); width:0%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <div class="modal-section-title">Le savais-tu ?</div>
+                <div class="fun-fact" style="--modal-color:${job.color}">
+                    <span class="fun-fact-emoji">💡</span>
+                    <p class="fun-fact-text">${job.funFact}</p>
+                </div>
+            </div>
+        `;
+
+        // Ouvrir le modal
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+
+        // Animer la barre de salaire (après ouverture)
+        setTimeout(() => {
+            const fill = document.getElementById('salaryFill');
+            if (fill) fill.style.width = job.salaryPct + '%';
+        }, 300);
+    }
+
+    // Fermer le modal
+    function closeModal() {
+        const overlay = document.getElementById('modalOverlay');
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    // Clic sur une carte → ouvrir le modal correspondant
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('click', () => {
+            const jobKey = card.getAttribute('data-job');
+            openModal(jobKey);
+        });
+    });
+
+    // Bouton fermer
+    document.getElementById('modalClose').addEventListener('click', closeModal);
+
+    // Clic sur le fond du modal pour fermer
+    document.getElementById('modalOverlay').addEventListener('click', (e) => {
+        if (e.target === e.currentTarget) closeModal();
+    });
+
+    // Touche Escape pour fermer
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+    });
+
+    // =========================================================
+    // FILTRE DES CARTES
+    // =========================================================
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Activer le bouton cliqué
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filter = btn.getAttribute('data-filter');
+
+            // Afficher / masquer les cartes
+            document.querySelectorAll('.card').forEach(card => {
+                if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>

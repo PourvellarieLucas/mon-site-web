@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture Web - Client, Serveur & Base de données</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ─── NAVIGATION ─── -->
+  <nav>
+    <a href="index.html" class="nav-logo">&#60;/Mon Stage&#62;</a>
+    <ul class="nav-links">
+      <li><a href="index.html" >Accueil</a></li>
+      <li><a href="histoires-web.html">L'histoire du web</a></li>
+      <li><a href="HTML-CSS-JS.html">Les langages</a></li>
+      <li><a href="architecture-web.html" class="active">Le WEB</a></li>
+      <li><a href="metiers-du-web.html">Les métiers</a></li>
+      <li><a href="remerciements.html">Remerciements</a></li>
+    </ul>
+  </nav>
+
+    <header class="page-header">
+        <h1>Comment fonctionne le Web ?</h1>
+        <p>L'architecture Client-Serveur-Base de données expliquée avec la métaphore d'un restaurant</p>
+    </header>
+
+    <div class="steps-indicator">
+        <div class="step-dot" data-step="0"><span class="step-num">1</span> Commande</div>
+        <div class="step-dot" data-step="1"><span class="step-num">2</span> Transmission</div>
+        <div class="step-dot" data-step="2"><span class="step-num">3</span> Demande du chef</div>
+        <div class="step-dot" data-step="3"><span class="step-num">4</span> Accès BDD</div>
+        <div class="step-dot" data-step="4"><span class="step-num">5</span> Préparation</div>
+        <div class="step-dot" data-step="5"><span class="step-num">6</span> Livraison</div>
+        <div class="step-dot" data-step="6"><span class="step-num">7</span> Réception</div>
+    </div>
+
+    <div class="scene-container" id="scene">
+        <div class="floor"></div>
+        <div class="path-line"></div>
+        <div class="zone zone-client">
+            <div class="zone-label">&#128187; Client Web</div>
+            <div class="client-group">
+                <div class="person-client">
+                    <div class="person-head">
+                        <div class="person-eyes"><span class="eye"></span><span class="eye"></span></div>
+                    </div>
+                    <div class="person-body"></div>
+                </div>
+                <div class="table">
+                    <div class="laptop">
+                        <div class="laptop-screen">
+                            <div class="laptop-screen-content" id="laptopScreen">
+                                <div class="screen-line" style="width:60%"></div>
+                                <div class="screen-line" style="width:80%"></div>
+                                <div class="screen-line" style="width:40%"></div>
+                            </div>
+                        </div>
+                        <div class="laptop-base"></div>
+                    </div>
+                    <div class="table-top"></div>
+                    <div class="table-leg-left"></div>
+                    <div class="table-leg-right"></div>
+                </div>
+            </div>
+        </div>
+        <div class="zone zone-kitchen">
+            <div class="zone-label">&#127859; Serveur Web + Base de données</div>
+            <div class="kitchen">
+                <div class="chef" id="chef">
+                    <div class="chef-hat"></div>
+                    <div class="chef-face">
+                        <div class="chef-eyes"><span class="eye"></span><span class="eye"></span></div>
+                        <div class="chef-mustache"></div>
+                    </div>
+                    <div class="chef-body-el"></div>
+                </div>
+                <div class="pot pot-1">
+                    <div class="steam-container" id="steam1"><div class="steam"></div><div class="steam"></div><div class="steam"></div></div>
+                    <div class="pot-handle"></div><div class="pot-lid"></div><div class="pot-body"></div>
+                </div>
+                <div class="pot pot-2">
+                    <div class="steam-container" id="steam2"><div class="steam"></div><div class="steam"></div><div class="steam"></div></div>
+                    <div class="pot-handle"></div><div class="pot-lid"></div><div class="pot-body"></div>
+                </div>
+                <div class="kitchen-counter">
+                    <div class="counter-top"></div>
+                    <div class="counter-body">
+                        <div class="oven">
+                            <div class="oven-window" id="ovenWindow"></div>
+                            <div class="oven-knobs"><span class="oven-knob"></span><span class="oven-knob"></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="database-fridge">
+                    <div class="fridge-body">
+                        <div class="fridge-door" id="fridgeDoor">
+                            <div class="fridge-handle"></div>
+                            <div class="fridge-panel">
+                                <div class="fridge-light" id="light1"></div>
+                                <div class="fridge-light" id="light2"></div>
+                                <div class="fridge-light" id="light3"></div>
+                            </div>
+                            <div class="fridge-labels">
+                                <div class="fridge-label-item">👥 Users</div>
+                                <div class="fridge-label-item">📦 Products</div>
+                                <div class="fridge-label-item">📋 Orders</div>
+                            </div>
+                        </div>
+                        <div class="fridge-interior">
+                            <div class="fridge-shelf"></div><div class="fridge-shelf"></div><div class="fridge-shelf"></div>
+                            <div class="fridge-items" id="fridgeItems">
+                                <div class="fridge-item-row">
+                                    <div class="fridge-item" data-item="1">📧</div>
+                                    <div class="fridge-item" data-item="2">🔑</div>
+                                    <div class="fridge-item" data-item="3">📛</div>
+                                </div>
+                                <div class="fridge-item-row">
+                                    <div class="fridge-item" data-item="4">💰</div>
+                                    <div class="fridge-item" data-item="5">📅</div>
+                                    <div class="fridge-item" data-item="6">📍</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="database-label">🗄️ Base de données</div>
+                </div>
+            </div>
+        </div>
+        <div class="waiter" id="waiter">
+            <div class="waiter-body-group">
+                <div class="waiter-head"><div class="waiter-eyes"><span class="eye"></span><span class="eye"></span></div></div>
+                <div class="waiter-torso"></div>
+                <div class="waiter-legs"><div class="waiter-leg"></div><div class="waiter-leg"></div></div>
+                <div class="tray" id="tray"><span class="tray-item" id="trayItem"></span></div>
+            </div>
+            <div class="waiter-label">Protocole HTTP</div>
+        </div>
+        <div class="commis" id="commis">
+            <div class="commis-body-group">
+                <div class="commis-head"><div class="commis-eyes"><span class="eye"></span><span class="eye"></span></div></div>
+                <div class="commis-torso"></div>
+                <div class="commis-legs"><div class="commis-leg"></div><div class="commis-leg"></div></div>
+                <div class="commis-tray" id="commisTray"><div class="commis-tray-items" id="commisTrayItems"></div></div>
+            </div>
+            <div class="commis-label">Code PHP/SQL</div>
+        </div>
+        <div class="speech-bubble bubble-client" id="bubbleClient"></div>
+        <div class="speech-bubble bubble-waiter" id="bubbleWaiter"></div>
+        <div class="speech-bubble bubble-commis" id="bubbleCommis"></div>
+        <div class="speech-bubble bubble-kitchen" id="bubbleKitchen"></div>
+        <div class="speech-bubble bubble-database" id="bubbleDatabase"></div>
+        <div class="packet packet-request" id="packetReq">GET /profile</div>
+        <div class="packet packet-response" id="packetRes">200 OK + HTML</div>
+        <div class="packet packet-sql" id="packetSQL">SELECT * FROM users</div>
+    </div>
+
+    <div class="narration">
+        <div class="narration-box">
+            <p class="narration-text" id="narrationText">
+                Cliquez sur <span class="highlight highlight-blue">Lancer l'animation</span> pour voir comment un navigateur web communique avec un serveur et une base de données !
+            </p>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button class="btn btn-primary" id="btnPlay" onclick="startAnimation()">&#9654; Lancer l'animation</button>
+        <button class="btn btn-secondary" id="btnReset" onclick="resetAnimation()">&#8635; Recommencer</button>
+    </div>
+
+    <div class="mapping-section">
+        <h2 class="mapping-title">Restaurant = Architecture Web complète</h2>
+        <div class="mapping-grid">
+            <div class="mapping-card"><div class="icon">&#128100;</div><div class="label" style="color:var(--accent-blue)">Client (vous à table)</div><div class="desc">Le client qui commande un plat</div></div>
+            <div class="mapping-arrow">&#10145;</div>
+            <div class="mapping-card"><div class="icon">&#128187;</div><div class="label" style="color:var(--accent-blue)">Navigateur Web</div><div class="desc">Chrome, Firefox, Safari... envoie des requêtes HTTP</div></div>
+            <div class="mapping-card"><div class="icon">&#128084;</div><div class="label" style="color:var(--accent-green)">Serveur (le garçon)</div><div class="desc">Transporte la commande du client à la cuisine</div></div>
+            <div class="mapping-arrow">&#10145;</div>
+            <div class="mapping-card"><div class="icon">&#127760;</div><div class="label" style="color:var(--accent-green)">Protocole HTTP</div><div class="desc">Le protocole qui transporte les requêtes et réponses</div></div>
+            <div class="mapping-card"><div class="icon">&#128373;</div><div class="label" style="color:var(--accent-orange)">Le Chef cuisinier</div><div class="desc">Coordonne la préparation du plat</div></div>
+            <div class="mapping-arrow">&#10145;</div>
+            <div class="mapping-card"><div class="icon">&#128421;</div><div class="label" style="color:var(--accent-orange)">Serveur Web</div><div class="desc">Apache, Nginx... traite la requête et génère la page</div></div>
+            <div class="mapping-card"><div class="icon">&#128104;&#8205;&#127859;</div><div class="label" style="color:var(--accent-cyan)">Commis de cuisine</div><div class="desc">Va chercher les ingrédients au frigo</div></div>
+            <div class="mapping-arrow">&#10145;</div>
+            <div class="mapping-card"><div class="icon">&#128187;</div><div class="label" style="color:var(--accent-cyan)">Code PHP/Python</div><div class="desc">Exécute des requêtes SQL pour récupérer les données</div></div>
+            <div class="mapping-card"><div class="icon">&#129374;</div><div class="label" style="color:var(--accent-cyan)">Armoire frigorifique</div><div class="desc">Stocke tous les ingrédients classés par type</div></div>
+            <div class="mapping-arrow">&#10145;</div>
+            <div class="mapping-card"><div class="icon">&#128190;</div><div class="label" style="color:var(--accent-cyan)">Base de données</div><div class="desc">MySQL, PostgreSQL... stocke toutes les données</div></div>
+            <div class="mapping-card"><div class="icon">&#127869;</div><div class="label" style="color:var(--accent-purple)">Le Plat servi</div><div class="desc">Ce que le client reçoit dans son assiette</div></div>
+            <div class="mapping-arrow">&#10145;</div>
+            <div class="mapping-card"><div class="icon">&#128196;</div><div class="label" style="color:var(--accent-purple)">La page Web</div><div class="desc">Le HTML, CSS, JS avec les données affichés</div></div>
+        </div>
+    </div>
+
+    <script>
+        const waiter = document.getElementById('waiter');
+        const tray = document.getElementById('tray');
+        const trayItem = document.getElementById('trayItem');
+        const commis = document.getElementById('commis');
+        const commisTray = document.getElementById('commisTray');
+        const commisTrayItems = document.getElementById('commisTrayItems');
+        const chef = document.getElementById('chef');
+        const ovenWindow = document.getElementById('ovenWindow');
+        const steam1 = document.getElementById('steam1');
+        const steam2 = document.getElementById('steam2');
+        const fridgeDoor = document.getElementById('fridgeDoor');
+        const fridgeItems = document.getElementById('fridgeItems');
+        const light1 = document.getElementById('light1');
+        const light2 = document.getElementById('light2');
+        const light3 = document.getElementById('light3');
+        const bubbleClient = document.getElementById('bubbleClient');
+        const bubbleWaiter = document.getElementById('bubbleWaiter');
+        const bubbleCommis = document.getElementById('bubbleCommis');
+        const bubbleKitchen = document.getElementById('bubbleKitchen');
+        const bubbleDatabase = document.getElementById('bubbleDatabase');
+        const packetReq = document.getElementById('packetReq');
+        const packetRes = document.getElementById('packetRes');
+        const packetSQL = document.getElementById('packetSQL');
+        const narrationText = document.getElementById('narrationText');
+        const laptopScreen = document.getElementById('laptopScreen');
+        const btnPlay = document.getElementById('btnPlay');
+        const scene = document.getElementById('scene');
+        const stepDots = document.querySelectorAll('.step-dot');
+        let isAnimating = false;
+        let animationTimers = [];
+
+        function delay(ms) {
+            return new Promise(resolve => { const t = setTimeout(resolve, ms); animationTimers.push(t); });
+        }
+        function showBubble(el, text) { el.textContent = text; el.classList.add('visible'); }
+        function hideBubble(el) { el.classList.remove('visible'); }
+        function hideAllBubbles() { [bubbleClient, bubbleWaiter, bubbleCommis, bubbleKitchen, bubbleDatabase].forEach(b => hideBubble(b)); }
+        function setStep(n) { stepDots.forEach((dot, i) => { dot.classList.remove('active', 'done'); if (i < n) dot.classList.add('done'); if (i === n) dot.classList.add('active'); }); }
+        function setNarration(html) { narrationText.innerHTML = html; }
+        function setWaiterPos(pct) { waiter.style.left = pct + '%'; }
+        function setCommisPos(pct) { commis.style.right = (100 - pct) + '%'; }
+
+        const POS = { clientX: 15, waiterCenterX: 35, kitchenX: 60, commisStartX: 72, fridgeX: 82 };
+
+        function showPacket(el, fromPct, toPct, duration) {
+            return new Promise(resolve => {
+                el.style.left = fromPct + '%'; el.style.opacity = '1';
+                el.style.transition = `left ${duration}ms ease-in-out`;
+                el.offsetHeight;
+                requestAnimationFrame(() => { el.style.left = toPct + '%'; });
+                const t = setTimeout(() => { el.style.opacity = '0'; el.style.transition = 'none'; resolve(); }, duration);
+                animationTimers.push(t);
+            });
+        }
+
+        async function animateWaiterTo(toPct, duration = 1500) {
+            const currentLeft = parseFloat(waiter.style.left) || POS.waiterCenterX;
+            if (toPct < currentLeft) waiter.classList.add('flip'); else waiter.classList.remove('flip');
+            waiter.classList.add('walking');
+            waiter.style.transition = `left ${duration}ms ease-in-out`;
+            setWaiterPos(toPct);
+            await delay(duration);
+            waiter.classList.remove('walking');
+            waiter.style.transition = 'none';
+        }
+
+        async function animateCommisTo(toPct, duration = 1200) {
+            const currentRight = parseFloat(commis.style.right) || (100 - POS.commisStartX);
+            const currentPct = 100 - currentRight;
+            if (toPct < currentPct) commis.classList.add('flip'); else commis.classList.remove('flip');
+            commis.classList.add('walking');
+            commis.style.transition = `right ${duration}ms ease-in-out`;
+            setCommisPos(toPct);
+            await delay(duration);
+            commis.classList.remove('walking');
+            commis.style.transition = 'none';
+        }
+
+        async function startAnimation() {
+            if (isAnimating) return;
+            isAnimating = true; btnPlay.disabled = true;
+            resetVisuals();
+            setStep(0);
+            setNarration(`<span class="highlight highlight-blue">Le client</span> (votre navigateur) demande à voir son profil utilisateur.<br>C'est comme commander un plat personnalisé au restaurant !`);
+            showBubble(bubbleClient, '👤 Je veux voir mon profil !');
+            await delay(2500);
+            setStep(1); hideBubble(bubbleClient);
+            setNarration(`Le <span class="highlight highlight-green">protocole HTTP</span> (le serveur) prend la demande et l'apporte vers la cuisine.<br>Requête : <code>GET /profile</code>`);
+            await animateWaiterTo(POS.clientX, 1200);
+            showBubble(bubbleWaiter, '📝 Requête notée !');
+            await delay(1200); hideBubble(bubbleWaiter);
+            tray.classList.add('visible'); trayItem.textContent = '📝';
+            showPacket(packetReq, POS.clientX, POS.kitchenX, 2000);
+            await animateWaiterTo(POS.kitchenX, 2000);
+            tray.classList.remove('visible');
+            setStep(2);
+            setNarration(`Le <span class="highlight highlight-orange">serveur web</span> (le chef) reçoit la demande.<br>Il se rend compte qu'il a besoin des données du client stockées en base de données !`);
+            showBubble(bubbleKitchen, '🤔 J\'ai besoin des infos du client !');
+            await delay(2000); hideBubble(bubbleKitchen);
+            setStep(3);
+            setNarration(`Le <span class="highlight highlight-cyan">code PHP</span> (le commis) va chercher les données dans <span class="highlight highlight-cyan">la base de données</span> (l'armoire frigorifique).<br>Il exécute une requête SQL : <code>SELECT * FROM users WHERE id=42</code>`);
+            showBubble(bubbleCommis, '🔍 Je vais chercher les données !');
+            await animateCommisTo(POS.fridgeX, 1500);
+            hideBubble(bubbleCommis);
+            fridgeDoor.classList.add('open'); light1.classList.add('active'); light2.classList.add('active'); light3.classList.add('active');
+            showBubble(bubbleDatabase, '🗄️ SELECT * FROM users...');
+            await delay(1500);
+            const items = fridgeItems.querySelectorAll('.fridge-item');
+            for (let i = 0; i < 3; i++) { await delay(300); items[i].classList.add('taken'); }
+            hideBubble(bubbleDatabase); showBubble(bubbleDatabase, '✅ Données trouvées !');
+            commisTray.classList.add('visible'); commisTrayItems.innerHTML = '📧 📛 📅';
+            await delay(1000); hideBubble(bubbleDatabase);
+            fridgeDoor.classList.remove('open'); light1.classList.remove('active'); light2.classList.remove('active'); light3.classList.remove('active');
+            showBubble(bubbleCommis, '📦 Données récupérées !');
+            await animateCommisTo(POS.commisStartX, 1500);
+            hideBubble(bubbleCommis); commisTray.classList.remove('visible');
+            setStep(4);
+            setNarration(`Le <span class="highlight highlight-orange">chef</span> (serveur web) utilise les données pour préparer la page HTML personnalisée.<br>Il "cuisine" le HTML avec les informations du profil !`);
+            showBubble(bubbleKitchen, '👨‍🍳 Je prépare la page !');
+            chef.classList.add('cooking'); ovenWindow.classList.add('hot'); steam1.classList.add('active'); steam2.classList.add('active');
+            await delay(3000);
+            chef.classList.remove('cooking'); ovenWindow.classList.remove('hot'); steam1.classList.remove('active'); steam2.classList.remove('active');
+            hideBubble(bubbleKitchen); showBubble(bubbleKitchen, '✅ Page HTML prête !');
+            await delay(1200); hideBubble(bubbleKitchen);
+            setStep(5);
+            setNarration(`Le serveur (HTTP) rapporte la <span class="highlight highlight-green">réponse</span> au client.<br>Réponse : <code>200 OK</code> + page HTML avec les données du profil.`);
+            tray.classList.add('visible'); trayItem.textContent = '🍽️'; waiter.classList.add('flip');
+            showPacket(packetRes, POS.kitchenX, POS.clientX, 2000);
+            await animateWaiterTo(POS.clientX, 2000);
+            tray.classList.remove('visible'); waiter.classList.remove('flip');
+            setStep(6);
+            setNarration(`Le <span class="highlight highlight-blue">navigateur</span> reçoit la page HTML avec les données et l'affiche !<br>Le client peut maintenant voir son profil avec son nom, email, photo... 🎉`);
+            showBubble(bubbleClient, '🎉 Mon profil s\'affiche !');
+            laptopScreen.innerHTML = '';
+            const colors = ['var(--accent-blue)', 'var(--accent-green)', 'var(--accent-cyan)', 'var(--accent-orange)', '#fff'];
+            for (let i = 0; i < 8; i++) {
+                await delay(200);
+                const line = document.createElement('div'); line.className = 'screen-line';
+                line.style.width = (30 + Math.random() * 60) + '%';
+                line.style.background = colors[i % colors.length]; line.style.opacity = '0.7';
+                laptopScreen.appendChild(line);
+            }
+            await delay(2000); hideBubble(bubbleClient);
+            stepDots.forEach(dot => { dot.classList.remove('active'); dot.classList.add('done'); });
+            setNarration(`<strong>Architecture Web complète expliquée !</strong><br>Le <span class="highlight highlight-blue">navigateur</span> envoie une requête via <span class="highlight highlight-green">HTTP</span> au <span class="highlight highlight-orange">serveur web</span> qui utilise <span class="highlight highlight-cyan">du code PHP pour interroger la base de données</span> et générer une page personnalisée ! 🎯`);
+            await animateWaiterTo(POS.waiterCenterX, 1000);
+            isAnimating = false; btnPlay.disabled = false;
+        }
+
+        function resetVisuals() {
+            hideAllBubbles();
+            setWaiterPos(POS.waiterCenterX); setCommisPos(POS.commisStartX);
+            waiter.classList.remove('walking', 'flip'); commis.classList.remove('walking', 'flip');
+            waiter.style.transition = 'none'; commis.style.transition = 'none';
+            tray.classList.remove('visible'); commisTray.classList.remove('visible');
+            chef.classList.remove('cooking'); ovenWindow.classList.remove('hot');
+            steam1.classList.remove('active'); steam2.classList.remove('active');
+            fridgeDoor.classList.remove('open');
+            light1.classList.remove('active'); light2.classList.remove('active'); light3.classList.remove('active');
+            const items = fridgeItems.querySelectorAll('.fridge-item');
+            items.forEach(item => item.classList.remove('taken'));
+            packetReq.style.opacity = '0'; packetRes.style.opacity = '0'; packetSQL.style.opacity = '0';
+            packetReq.style.transition = 'none'; packetRes.style.transition = 'none'; packetSQL.style.transition = 'none';
+            stepDots.forEach(d => d.classList.remove('active', 'done'));
+            laptopScreen.innerHTML = `<div class="screen-line" style="width:60%"></div><div class="screen-line" style="width:80%"></div><div class="screen-line" style="width:40%"></div>`;
+        }
+
+        function resetAnimation() {
+            animationTimers.forEach(t => clearTimeout(t)); animationTimers = [];
+            isAnimating = false; btnPlay.disabled = false;
+            resetVisuals();
+            setNarration(`Cliquez sur <span class="highlight highlight-blue">Lancer l'animation</span> pour voir comment un navigateur web communique avec un serveur et une base de données !`);
+        }
+
+        setWaiterPos(POS.waiterCenterX);
+        setCommisPos(POS.commisStartX);
+    </script>
+
+
+    <!-- =====================================================
+         SECTION : LA COMPRESSION D'IMAGE ❄️
+    ====================================================== -->
+    <style>
+    /* ── Séparateur ── */
+    .comp-divider {
+        max-width: 900px; margin: 10px auto 50px;
+        border: none; border-top: 2px solid #1e3050;
+    }
+
+    /* ── Header section ── */
+    .comp-header {
+        text-align: center; padding: 0 20px 20px;
+        max-width: 800px; margin: 0 auto;
+    }
+    .comp-header h2 {
+        font-family: 'Syne', sans-serif;
+        font-size: clamp(1.4rem, 3vw, 2rem);
+        font-weight: 900;
+        background: linear-gradient(135deg, #22d3ee, #a855f7);
+        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        margin-bottom: 10px;
+    }
+    .comp-header p { color: var(--text-secondary); font-size: 1rem; line-height: 1.65; }
+
+    /* ── Steps ── */
+    .comp-steps {
+        display: flex; justify-content: center;
+        gap: 8px; margin: 12px auto 0;
+        flex-wrap: wrap; padding: 0 20px;
+    }
+    .comp-step {
+        display: flex; align-items: center; gap: 5px;
+        padding: 5px 12px; border-radius: 20px;
+        font-size: .72rem; font-weight: 500;
+        background: var(--bg-card); color: var(--text-secondary);
+        border: 1px solid transparent; transition: all .3s;
+    }
+    .comp-step.active { border-color: var(--accent-cyan); color: var(--accent-cyan); background: rgba(34,211,238,.1); }
+    .comp-step.done   { border-color: var(--accent-green); color: var(--accent-green); background: rgba(30,211,90,.1); }
+    .comp-sn {
+        width: 18px; height: 18px; border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        font-size: .65rem; font-weight: 700;
+        background: #334155; color: var(--text-secondary);
+    }
+    .comp-step.active .comp-sn { background: var(--accent-cyan); color: #000; }
+    .comp-step.done   .comp-sn { background: var(--accent-green); color: #000; }
+
+    /* ── Scene ── */
+    .comp-scene {
+        position: relative; width: 100%; max-width: 1400px;
+        height: 520px; margin: 18px auto 0; overflow: hidden;
+    }
+    .comp-floor {
+        position: absolute; bottom: 0; width: 100%; height: 80px;
+        background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+        border-top: 2px solid #334155;
+    }
+    .comp-floor::before {
+        content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+        background: repeating-linear-gradient(90deg, #334155 0, #334155 40px, transparent 40px, transparent 80px);
+    }
+    .comp-path {
+        position: absolute; bottom: 80px; left: 10%; right: 10%;
+        height: 2px; border-bottom: 3px dashed #334155;
+    }
+
+    /* Zone labels */
+    .comp-zlbl {
+        position: absolute; bottom: 45px;
+        font-size: .75rem; font-weight: 700;
+        letter-spacing: 1.5px; text-transform: uppercase;
+        padding: 5px 14px; border-radius: 20px; white-space: nowrap;
+    }
+    .comp-zlbl.cl { left: 1%; color: var(--accent-blue); background: rgba(79,156,247,.12); border: 1px solid rgba(79,156,247,.3); }
+    .comp-zlbl.ki { right: 7%; color: var(--accent-orange); background: rgba(255,140,66,.12); border: 1px solid rgba(255,140,66,.3); }
+
+    /* ── CLIENT (gauche) ── */
+    .comp-client-el {
+        position: absolute; bottom: 88px; left: 5%;
+    }
+
+    /* ── TABLE simple ── */
+    .comp-table {
+        width: 95px; height: 52px; position: relative;
+    }
+    .comp-table-top {
+        position: absolute; top: 0; left: 0;
+        width: 95px; height: 7px;
+        background: linear-gradient(180deg, #8B5E3C, #6B4226); border-radius: 3px;
+    }
+    .comp-table-leg { position: absolute; bottom: 0; width: 6px; height: 43px; background: #6B4226; border-radius: 0 0 2px 2px; }
+    .comp-tl-l { left: 10px; } .comp-tl-r { right: 10px; }
+
+    /* Laptop sur la table */
+    .comp-laptop-wrap {
+        position: absolute; top: -20px; left: 26px; width: 44px; height: 28px;
+    }
+    .comp-lscreen {
+        width: 40px; height: 20px; background: #0d1b2a;
+        border: 2px solid #555; border-radius: 3px 3px 0 0; overflow: hidden;
+    }
+    .comp-lbase { width: 46px; height: 3px; background: #666; border-radius: 0 0 2px 2px; margin-left: -3px; }
+
+    /* Person au-dessus de la table */
+    .comp-person {
+        position: absolute; top: -54px; left: 50%; transform: translateX(-50%);
+    }
+    .comp-phead {
+        width: 22px; height: 22px; background: #fdbf60; border-radius: 50%;
+        margin: 0 auto 2px; position: relative;
+    }
+    .comp-phead::before {
+        content: ''; position: absolute; top: -5px; left: -2px;
+        width: 26px; height: 13px; background: #333; border-radius: 12px 12px 0 0;
+    }
+    .comp-peyes {
+        position: absolute; top: 9px; left: 4px; width: 14px;
+        display: flex; justify-content: space-between;
+    }
+    .comp-pbody {
+        width: 26px; height: 24px; background: var(--accent-blue);
+        border-radius: 6px 6px 0 0; margin: 0 auto;
+    }
+
+    /* ── CHEF (droite) ── */
+    .comp-chef-el {
+        position: absolute; bottom: 88px; right: 10%; z-index: 8;
+    }
+    .comp-chef-el .cc-hat {
+        width: 24px; height: 16px; background: white;
+        border-radius: 7px 7px 0 0; margin: 0 auto; position: relative;
+    }
+    .comp-chef-el .cc-hat::before {
+        content: ''; position: absolute; bottom: 0; left: -2px;
+        width: 28px; height: 4px; background: white; border-radius: 2px;
+    }
+    .comp-chef-el .cc-face {
+        width: 20px; height: 18px; background: #d4915c;
+        border-radius: 50%; margin: 0 auto 2px; position: relative;
+    }
+    .comp-chef-el .cc-eyes {
+        position: absolute; top: 7px; left: 3px; width: 14px;
+        display: flex; justify-content: space-between;
+    }
+    .comp-chef-el .cc-mst {
+        position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%);
+        width: 10px; height: 3px; background: #333; border-radius: 0 0 5px 5px;
+    }
+    .comp-chef-el .cc-body {
+        width: 26px; height: 26px; background: white;
+        border-radius: 5px 5px 0 0; margin: 0 auto; position: relative;
+    }
+    .comp-chef-el .cc-body::before {
+        content: ''; position: absolute; top: 2px; left: 50%; transform: translateX(-50%);
+        width: 2px; height: 18px; background: #333;
+    }
+    .comp-chef-el.bouncing { animation: ccBnc .5s ease-in-out infinite; }
+    @keyframes ccBnc { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-4px)} }
+
+    /* ── LE PLAT (le héros de l'animation) ── */
+    .comp-dish-wrap {
+        position: absolute; bottom: 170px; right: 16%;
+        display: flex; flex-direction: column;
+        align-items: center; gap: 6px; z-index: 20;
+    }
+
+    /* La cloche / assiette */
+    .comp-plate {
+        width: 90px; height: 90px; border-radius: 50%;
+        background: radial-gradient(circle at 35% 35%, #f9fafb, #d1d5db);
+        border: 4px solid #9ca3af;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 2.6rem; position: relative;
+        box-shadow: 0 8px 24px rgba(0,0,0,.45);
+        transition: width .7s cubic-bezier(.4,0,.2,1),
+                    height .7s cubic-bezier(.4,0,.2,1),
+                    font-size .7s cubic-bezier(.4,0,.2,1),
+                    filter .8s ease,
+                    box-shadow .8s ease,
+                    border-color .8s ease;
+        overflow: hidden;
+    }
+    /* Reflet sur le plat */
+    .comp-plate::before {
+        content: ''; position: absolute;
+        top: 10%; left: 15%; width: 30%; height: 20%;
+        background: rgba(255,255,255,.35); border-radius: 50%;
+        transform: rotate(-20deg); pointer-events: none;
+    }
+    /* Overlay givré (glace) */
+    .comp-plate::after {
+        content: ''; position: absolute; inset: 0; border-radius: 50%;
+        background: transparent;
+        transition: background .8s ease;
+    }
+    .comp-plate.frozen::after { background: rgba(148,222,255,.3); }
+    .comp-plate.frozen {
+        filter: brightness(.72) saturate(.18) hue-rotate(165deg);
+        border-color: #7dd3fc;
+        box-shadow: 0 0 22px rgba(125,211,252,.65), 0 8px 24px rgba(0,0,0,.45);
+    }
+    .comp-plate.small { width: 34px; height: 34px; font-size: .9rem; }
+
+    /* Badge taille fichier */
+    .comp-badge {
+        padding: 3px 11px; border-radius: 20px;
+        font-size: .73rem; font-weight: 700; white-space: nowrap;
+        background: rgba(255,140,66,.15); border: 1px solid rgba(255,140,66,.4);
+        color: var(--accent-orange);
+        transition: all .5s ease;
+    }
+    .comp-badge.light {
+        background: rgba(34,211,238,.15); border-color: rgba(34,211,238,.4);
+        color: var(--accent-cyan);
+    }
+
+    /* ── WAITER (scène compression) ── */
+    #cmpWaiter {
+        position: absolute; bottom: 82px; left: 38%; z-index: 10;
+    }
+    #cmpWaiter .cw2-body { position: relative; width: 50px; text-align: center; }
+    #cmpWaiter .cw2-head {
+        width: 24px; height: 24px; background: #e8c07a;
+        border-radius: 50%; margin: 0 auto 2px; position: relative;
+    }
+    #cmpWaiter .cw2-head::before {
+        content: ''; position: absolute; top: -3px; left: 50%; transform: translateX(-50%);
+        width: 28px; height: 6px; background: #222; border-radius: 4px 4px 0 0;
+    }
+    #cmpWaiter .cw2-eyes {
+        position: absolute; top: 10px; left: 5px; width: 14px;
+        display: flex; justify-content: space-between;
+    }
+    #cmpWaiter .cw2-torso {
+        width: 30px; height: 30px; background: #111;
+        border-radius: 6px 6px 0 0; margin: 0 auto; position: relative;
+    }
+    #cmpWaiter .cw2-torso::before {
+        content: ''; position: absolute; top: 2px; left: 50%; transform: translateX(-50%);
+        width: 2px; height: 20px; background: white;
+    }
+    #cmpWaiter .cw2-torso::after {
+        content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+        width: 10px; height: 5px; background: white;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+    #cmpWaiter .cw2-legs { display: flex; justify-content: center; gap: 4px; }
+    #cmpWaiter .cw2-leg { width: 10px; height: 22px; background: #2a2a2a; border-radius: 0 0 3px 3px; }
+
+    /* Plateau du serveur compression */
+    #cmpTray {
+        position: absolute; top: 5px; right: -20px;
+        width: 30px; height: 4px; background: #aaa; border-radius: 2px;
+        opacity: 0; transition: opacity .3s;
+    }
+    #cmpTray.show { opacity: 1; }
+    #cmpTrayItem {
+        position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+        font-size: 12px; transition: font-size .7s;
+    }
+
+    /* Marche */
+    #cmpWaiter.cw2-walk .cw2-leg:first-child { animation: walkLeg1 .4s ease-in-out infinite; }
+    #cmpWaiter.cw2-walk .cw2-leg:last-child  { animation: walkLeg2 .4s ease-in-out infinite; }
+    /* Retournement */
+    #cmpWaiter.cw2-flip .cw2-body { transform: scaleX(-1); }
+
+    /* Tremblement (trop lourd) */
+    #cmpWaiter.cw2-struggle .cw2-body { animation: cw2Shk .28s ease-in-out infinite; }
+    @keyframes cw2Shk {
+        0%,100%{transform:rotate(0) translateX(0)}
+        25%{transform:rotate(-7deg) translateX(-3px)}
+        75%{transform:rotate(7deg) translateX(3px)}
+    }
+
+    /* Sueur */
+    .cw2-sweat {
+        position: absolute; top: 0px; right: -8px;
+        font-size: 11px; opacity: 0;
+        animation: swDrop .75s ease-in infinite;
+    }
+    @keyframes swDrop { 0%{opacity:1;transform:translateY(0)} 100%{opacity:0;transform:translateY(16px)} }
+
+    /* ── PARTICULES ── */
+    .cmp-ice {
+        position: absolute; pointer-events: none; z-index: 25;
+        animation: cmpIceFly 1.1s ease-out forwards;
+    }
+    @keyframes cmpIceFly {
+        0%  { opacity:1; transform: translate(0,0) scale(1) rotate(0deg); }
+        100%{ opacity:0; transform: translate(var(--ix),var(--iy)) scale(.3) rotate(360deg); }
+    }
+    .cmp-warm {
+        position: absolute; pointer-events: none; z-index: 25;
+        animation: cmpWarmFly .95s ease-out forwards;
+    }
+    @keyframes cmpWarmFly {
+        0%  { opacity:1; transform: translate(0,0) scale(1); }
+        100%{ opacity:0; transform: translate(var(--wx), var(--wy)) scale(.2); }
+    }
+
+    /* ── BULLES DE DIALOGUE (compression) ── */
+    .cmp-bub {
+        position: absolute; background: white; color: #111;
+        padding: 7px 13px; border-radius: 12px;
+        font-size: .74rem; font-weight: 600; white-space: nowrap;
+        opacity: 0; transform: scale(.5);
+        transition: opacity .28s, transform .28s;
+        z-index: 30; box-shadow: 0 4px 15px rgba(0,0,0,.3);
+    }
+    .cmp-bub.show { opacity: 1; transform: scale(1); }
+    .cmp-bub::after {
+        content: ''; position: absolute; bottom: -6px; left: 16px;
+        width: 12px; height: 12px; background: white; transform: rotate(45deg);
+    }
+    #cmpBubCli  { bottom: 220px; left: 7%; }
+    #cmpBubWai  { bottom: 298px; left: 28%; }
+    #cmpBubChef { bottom: 190px; right: 0%; }
+
+    /* ── NARRATION ── */
+    .comp-narr { max-width: 900px; margin: 0 auto; padding: 16px 20px; text-align: center; }
+    .comp-narr-box {
+        background: var(--bg-card); border: 1px solid #334155;
+        border-radius: 12px; padding: 18px 28px;
+        min-height: 82px; display: flex; align-items: center; justify-content: center;
+    }
+    .comp-narr-box p { font-size: 1rem; line-height: 1.7; color: var(--text-primary); }
+
+    /* Controls */
+    .comp-controls {
+        display: flex; justify-content: center;
+        gap: 12px; padding: 0 20px 60px; flex-wrap: wrap;
+    }
+    .comp-btn-primary {
+        background: linear-gradient(135deg, #22d3ee, #0ea5e9);
+        color: #000; font-weight: 700;
+        box-shadow: 0 4px 15px rgba(34,211,238,.3);
+    }
+    .comp-btn-primary:disabled { opacity: .5; cursor: not-allowed; transform: none !important; }
+    </style>
+
+    <hr class="comp-divider">
+
+    <div class="comp-header">
+        <h2>❄️ La Compression d'Image</h2>
+        <p>Un serveur doit parfois envoyer de grosses images. Mais comment les transporter sans ralentir le réseau ?<br>
+        La réponse : la <strong style="color:var(--accent-cyan)">compression</strong> — comme congeler un plat pour qu'il soit plus facile à porter !</p>
+    </div>
+
+    <div class="comp-steps">
+        <div class="comp-step" id="cst0"><span class="comp-sn">1</span> Demande</div>
+        <div class="comp-step" id="cst1"><span class="comp-sn">2</span> Trop lourd ! 😰</div>
+        <div class="comp-step" id="cst2"><span class="comp-sn">3</span> Congélation ❄️</div>
+        <div class="comp-step" id="cst3"><span class="comp-sn">4</span> Transport</div>
+        <div class="comp-step" id="cst4"><span class="comp-sn">5</span> Décongélation 🔥</div>
+        <div class="comp-step" id="cst5"><span class="comp-sn">6</span> Image affichée ✅</div>
+    </div>
+
+    <!-- SCÈNE COMPRESSION -->
+     <div class="scene-container" id="scene">
+    <div class="comp-scene" id="cmpScene">
+        <div class="comp-floor"></div>
+        <div class="comp-path"></div>
+        <div class="comp-zlbl cl">💻 Navigateur (Client)</div>
+        <div class="comp-zlbl ki">🍽️ Serveur (Cuisinier)</div>
+ 
+        <!-- CLIENT gauche -->
+        <div class="comp-client-el">
+            <div class="comp-person">
+                <div class="comp-phead">
+                    <div class="comp-peyes"><span class="eye"></span><span class="eye"></span></div>
+                </div>
+                <div class="comp-pbody"></div>
+            </div>
+            <div class="comp-table">
+                <div class="comp-laptop-wrap">
+                    <div class="comp-lscreen" id="cmpLaptop">
+                        <div style="height:2px;margin:3px 3px;background:var(--accent-blue);opacity:.5;border-radius:1px;width:65%"></div>
+                        <div style="height:2px;margin:3px 3px;background:var(--accent-blue);opacity:.5;border-radius:1px;width:45%"></div>
+                        <div style="height:2px;margin:3px 3px;background:var(--accent-blue);opacity:.5;border-radius:1px;width:80%"></div>
+                    </div>
+                    <div class="comp-lbase"></div>
+                </div>
+                <div class="comp-table-top"></div>
+                <div class="comp-table-leg comp-tl-l"></div>
+                <div class="comp-table-leg comp-tl-r"></div>
+            </div>
+        </div>
+
+        <!-- CHEF droite -->
+        <div class="comp-chef-el" id="cmpChef">
+            <div class="cc-hat"></div>
+            <div class="cc-face">
+                <div class="cc-eyes"><span class="eye"></span><span class="eye"></span></div>
+                <div class="cc-mst"></div>
+            </div>
+            <div class="cc-body"></div>
+        </div>
+
+        <!-- LE PLAT -->
+        <div class="comp-dish-wrap" id="cmpDishWrap">
+            <div class="comp-plate" id="cmpPlate">🖼️</div>
+            <div class="comp-badge" id="cmpBadge">📁 2,4 Mo</div>
+        </div>
+
+        <!-- SERVEUR (waiter) -->
+        <div id="cmpWaiter">
+            <div class="cw2-body">
+                <div class="cw2-head">
+                    <div class="cw2-eyes"><span class="eye"></span><span class="eye"></span></div>
+                </div>
+                <div class="cw2-torso"></div>
+                <div class="cw2-legs">
+                    <div class="cw2-leg"></div>
+                    <div class="cw2-leg"></div>
+                </div>
+                <div id="cmpTray"><span id="cmpTrayItem"></span></div>
+            </div>
+        </div>
+
+        <!-- Bulles -->
+        <div class="cmp-bub" id="cmpBubCli"></div>
+        <div class="cmp-bub" id="cmpBubWai"></div>
+        <div class="cmp-bub" id="cmpBubChef"></div>
+    </div> 
+    </div>
+
+    <!-- NARRATION -->
+    <div class="comp-narr">
+        <div class="comp-narr-box">
+            <p id="cmpNarr">Clique sur <strong style="color:var(--accent-cyan)">Lancer l'animation</strong> pour comprendre pourquoi et comment les images sont compressées avant d'être envoyées sur internet !</p>
+        </div>
+    </div>
+
+    <div class="comp-controls">
+        <button class="btn comp-btn-primary" id="cmpBtnPlay" onclick="startCompAnim()">▶ Lancer l'animation</button>
+        <button class="btn btn-secondary" onclick="resetCompAnim()">↺ Recommencer</button>
+    </div>
+
+    <script>
+    (function() {
+        /* ── Références DOM ── */
+        const cScene   = document.getElementById('cmpScene');
+        const cWaiter  = document.getElementById('cmpWaiter');
+        const cTray    = document.getElementById('cmpTray');
+        const cTrayItm = document.getElementById('cmpTrayItem');
+        const cPlate   = document.getElementById('cmpPlate');
+        const cBadge   = document.getElementById('cmpBadge');
+        const cDish    = document.getElementById('cmpDishWrap');
+        const cChef    = document.getElementById('cmpChef');
+        const cLaptop  = document.getElementById('cmpLaptop');
+        const bCli     = document.getElementById('cmpBubCli');
+        const bWai     = document.getElementById('cmpBubWai');
+        const bChef    = document.getElementById('cmpBubChef');
+        const cNarr    = document.getElementById('cmpNarr');
+        const cBtn     = document.getElementById('cmpBtnPlay');
+        const cSteps   = document.querySelectorAll('.comp-step');
+
+        let cTimers = [], cRunning = false, cWaiterX = 38;
+
+        /* ── Helpers ── */
+        function cd(ms) { return new Promise(r => { const t = setTimeout(r, ms); cTimers.push(t); }); }
+        function bShow(el, txt) { el.textContent = txt; el.classList.add('show'); }
+        function bHide(el) { el.classList.remove('show'); }
+        function bAll()  { [bCli, bWai, bChef].forEach(b => bHide(b)); }
+        function cStep(n) { cSteps.forEach((s,i) => { s.classList.remove('active','done'); if(i<n) s.classList.add('done'); if(i===n) s.classList.add('active'); }); }
+        function cN(html) { cNarr.innerHTML = html; }
+
+        function setCWX(pct) { cWaiter.style.left = pct + '%'; cWaiterX = pct; }
+
+        async function cMove(toPct, dur = 1500) {
+            if (toPct < cWaiterX) cWaiter.classList.add('cw2-flip');
+            else cWaiter.classList.remove('cw2-flip');
+            cWaiter.classList.add('cw2-walk');
+            cWaiter.style.transition = `left ${dur}ms ease-in-out`;
+            setCWX(toPct);
+            await cd(dur);
+            cWaiter.classList.remove('cw2-walk');
+            cWaiter.style.transition = 'none';
+        }
+
+        /* ── Particules ── */
+        function spawnIce(n = 12) {
+            const r = cDish.getBoundingClientRect();
+            const sr = cScene.getBoundingClientRect();
+            const cx = r.left + r.width/2 - sr.left;
+            const cy = r.top  + r.height/2 - sr.top;
+            const icons = ['❄️','🧊','❄️','✦','❄️','*'];
+            for (let i = 0; i < n; i++) {
+                const p = document.createElement('div');
+                p.className = 'cmp-ice';
+                const a = (Math.PI*2/n)*i, d = 36 + Math.random()*32;
+                p.style.cssText = `left:${cx}px;top:${cy}px;font-size:${12+Math.random()*10}px;--ix:${Math.cos(a)*d}px;--iy:${Math.sin(a)*d}px;animation-delay:${Math.random()*.25}s`;
+                p.textContent = icons[i % icons.length];
+                cScene.appendChild(p);
+                cTimers.push(setTimeout(() => p.remove(), 1600));
+            }
+        }
+
+        function spawnWarm(n = 10) {
+            const r = cDish.getBoundingClientRect();
+            const sr = cScene.getBoundingClientRect();
+            const cx = r.left + r.width/2 - sr.left;
+            const cy = r.top  + r.height/2 - sr.top;
+            const icons = ['🔥','♨️','✨','💫','🌡️'];
+            for (let i = 0; i < n; i++) {
+                const p = document.createElement('div');
+                p.className = 'cmp-warm';
+                p.style.cssText = `left:${cx + (Math.random()-.5)*28}px;top:${cy}px;font-size:${10+Math.random()*10}px;--wx:${(Math.random()-.5)*55}px;--wy:${-25-Math.random()*35}px;animation-delay:${Math.random()*.25}s`;
+                p.textContent = icons[i % icons.length];
+                cScene.appendChild(p);
+                cTimers.push(setTimeout(() => p.remove(), 1400));
+            }
+        }
+
+        /* ════════════════════════════════════════
+           ANIMATION PRINCIPALE
+        ════════════════════════════════════════ */
+        async function startCompAnim() {
+            if (cRunning) return;
+            cRunning = true; cBtn.disabled = true;
+            resetCompVisuals();
+
+            /* ── ÉTAPE 1 : Le client demande l'image ── */
+            cStep(0);
+            cN(`Le <span class="highlight highlight-blue">navigateur</span> demande une photo au serveur.<br>C'est comme un client qui commande un grand plat de fruits de mer au restaurant !`);
+            bShow(bCli, '🖼️ Je veux voir cette image !');
+            await cd(2600);
+            bHide(bCli);
+
+            /* ── ÉTAPE 2 : Le plat est énorme – trop lourd ── */
+            cStep(1);
+            cN(`Le <span class="highlight highlight-orange">serveur</span> sort l'image originale… <strong>2,4 Mo !</strong><br>Le serveur HTTP essaie de la porter pour l'envoyer, mais c'est beaucoup trop lourd !`);
+
+            /* Le chef présente le plat fièrement */
+            cChef.classList.add('bouncing');
+            bShow(bChef, '🍽️ Voici l\'image, 2,4 Mo !');
+            await cd(2000);
+            bHide(bChef); cChef.classList.remove('bouncing');
+
+            /* Le serveur marche vers le plat pour l'attraper */
+            await cMove(72, 1400);
+
+            /* Le serveur tremble – trop lourd */
+            cWaiter.classList.add('cw2-struggle');
+            const sw = document.createElement('div'); sw.className = 'cw2-sweat'; sw.textContent = '💦';
+            cWaiter.querySelector('.cw2-body').appendChild(sw);
+            bShow(bWai, '😰 C\'est beaucoup trop lourd !');
+            await cd(2800);
+            cWaiter.classList.remove('cw2-struggle');
+            bHide(bWai);
+            if (sw.parentNode) sw.remove();
+
+            /* ── ÉTAPE 3 : Le chef congèle le plat ── */
+            cStep(2);
+            cN(`Le <span class="highlight highlight-orange">chef (serveur)</span> va <strong style="color:var(--accent-cyan)">comprimer</strong> l'image.<br>Il la <strong>congèle</strong> : elle rétrécit et devient beaucoup plus légère à transporter !`);
+
+            cChef.classList.add('bouncing');
+            bShow(bChef, '❄️ Pas de souci, je vais la congeler !');
+            await cd(1400);
+            bHide(bChef); cChef.classList.remove('bouncing');
+
+            /* Particules de glace */
+            spawnIce(14);
+            await cd(350);
+            spawnIce(10);
+
+            /* Le plat gèle et rapetisse */
+            cPlate.classList.add('frozen');
+            await cd(120);
+            cPlate.classList.add('small');
+            cBadge.classList.add('light');
+            await cd(200);
+            cBadge.textContent = '📁 0,3 Mo';
+
+            await cd(1400);
+            bShow(bChef, '✅ De 2,4 Mo à seulement 0,3 Mo !');
+            await cd(2400);
+            bHide(bChef);
+
+            /* ── ÉTAPE 4 : Le serveur porte le petit plat congelé ── */
+            cStep(3);
+            cN(`Le <span class="highlight highlight-green">serveur HTTP</span> porte maintenant le plat congelé sans problème.<br>L'image comprimée voyage <strong>8× plus vite</strong> sur internet !`);
+
+            bShow(bWai, '😊 Beaucoup plus léger !');
+            /* Le serveur prend le plat congelé sur son plateau */
+            cTray.classList.add('show');
+            cTrayItm.textContent = '🧊';
+            cTrayItm.style.fontSize = '11px';
+            /* On cache le plat flottant (il est maintenant "sur le plateau") */
+            cDish.style.visibility = 'hidden';
+
+            await cd(1200);
+            bHide(bWai);
+
+            /* Le serveur marche vers le client */
+            await cMove(14, 2200);
+
+            /* ── ÉTAPE 5 : Décongélation chez le client ── */
+            cStep(4);
+            cN(`Le <span class="highlight highlight-blue">navigateur</span> reçoit l'image comprimée et la <strong style="color:var(--accent-orange)">décomprime</strong> automatiquement.<br>Comme décongeler un plat — l'image retrouve sa taille et qualité d'origine !`);
+
+            cTray.classList.remove('show');
+
+            /* Réapparaître le plat côté client, encore congelé */
+            cDish.style.visibility = 'visible';
+            cDish.style.right = 'auto';
+            cDish.style.left  = '12%';
+            cDish.style.bottom = '170px';
+
+            await cd(400);
+
+            /* Particules de chaleur */
+            spawnWarm(12);
+            await cd(350);
+            spawnWarm(8);
+
+            /* Décongélation : le plat reprend sa taille */
+            cPlate.classList.remove('frozen');
+            await cd(120);
+            cPlate.classList.remove('small');
+            cBadge.classList.remove('light');
+            await cd(200);
+            cBadge.textContent = '📁 2,4 Mo';
+
+            bShow(bWai, '🔥 Décongélation en cours...');
+            await cd(1800);
+            bHide(bWai);
+
+            /* ── ÉTAPE 6 : Le client est content ── */
+            cStep(5);
+            cN(`✅ <strong>L'image s'affiche en pleine qualité !</strong><br>Sans compression, la page aurait mis <strong>8× plus de temps</strong> à charger.<br>Formats courants : <strong style="color:var(--accent-cyan)">JPEG, WebP, AVIF</strong> — qualité quasi identique, poids réduit !`);
+
+            bShow(bCli, '🎉 L\'image est parfaite !');
+
+            /* L'écran du laptop affiche l'image */
+            cLaptop.innerHTML = '<div style="width:100%;height:100%;background:linear-gradient(135deg,#1e3a5f,#0ea5e9,#22d3ee);display:flex;align-items:center;justify-content:center;font-size:14px;">🖼️</div>';
+
+            await cd(2200);
+            bHide(bCli);
+
+            /* Toutes les étapes cochées */
+            cSteps.forEach(s => { s.classList.remove('active'); s.classList.add('done'); });
+
+            cRunning = false; cBtn.disabled = false;
+        }
+
+        /* ── Reset visuel ── */
+        function resetCompVisuals() {
+            bAll();
+            setCWX(38);
+            cWaiter.classList.remove('cw2-walk','cw2-flip','cw2-struggle');
+            cWaiter.style.transition = 'none';
+            cTray.classList.remove('show');
+            cTrayItm.textContent = '';
+
+            cPlate.classList.remove('frozen','small');
+            cBadge.classList.remove('light');
+            cBadge.textContent = '📁 2,4 Mo';
+
+            cDish.style.visibility = 'visible';
+            cDish.style.left   = 'auto';
+            cDish.style.right  = '16%';
+            cDish.style.bottom = '115px';
+
+            cChef.classList.remove('bouncing');
+            cScene.querySelectorAll('.cmp-ice,.cmp-warm').forEach(e => e.remove());
+            cSteps.forEach(s => s.classList.remove('active','done'));
+
+            cLaptop.innerHTML = `
+                <div style="height:2px;margin:3px 3px;background:var(--accent-blue);opacity:.5;border-radius:1px;width:65%"></div>
+                <div style="height:2px;margin:3px 3px;background:var(--accent-blue);opacity:.5;border-radius:1px;width:45%"></div>
+                <div style="height:2px;margin:3px 3px;background:var(--accent-blue);opacity:.5;border-radius:1px;width:80%"></div>
+            `;
+        }
+
+        /* ── Reset complet ── */
+        function resetCompAnim() {
+            cTimers.forEach(t => clearTimeout(t)); cTimers = [];
+            cRunning = false; cBtn.disabled = false;
+            resetCompVisuals();
+            cN(`Clique sur <strong style="color:var(--accent-cyan)">Lancer l'animation</strong> pour comprendre pourquoi et comment les images sont compressées avant d'être envoyées sur internet !`);
+        }
+
+        /* Exposer pour les boutons onclick */
+        window.startCompAnim = startCompAnim;
+        window.resetCompAnim = resetCompAnim;
+
+        /* Init */
+        setCWX(38);
+        resetCompVisuals();
+    })();
+    </script>
+
+  <!-- ─── FOOTER ─── -->
+  <footer>
+    <nav class="footer-nav">
+      <a href="index.html">Accueil</a>
+      <a href="histoires-web.html">L'histoire du web</a>
+      <a href="HTML-CSS-JS.html">Les langages</a>
+      <a href="architecture-web.html">Le WEB</a>
+      <a href="metiers-du-web.html">Les métiers</a>
+      <a href="remerciements.html">Remerciements</a>
+    </nav>
+    <p class="footer-copy">Fait avec <span>♥</span> dans le cadre de mon stage de troisième &nbsp;·&nbsp; 2025/2026</p>
+  </footer>
+
+</body>
+</html>

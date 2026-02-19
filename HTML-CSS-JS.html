@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>HTML, CSS & JS – L'Usine du Web</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+  <!-- ─── NAVIGATION ─── -->
+  <nav>
+    <a href="index.html" class="nav-logo">&#60;/Mon Stage&#62;</a>
+    <ul class="nav-links">
+      <li><a href="index.html" >Accueil</a></li>
+      <li><a href="histoires-web.html">L'histoire du web</a></li>
+      <li><a href="HTML-CSS-JS.html" class="active">Les langages</a></li>
+      <li><a href="architecture-web.html">Le WEB</a></li>
+      <li><a href="metiers-du-web.html">Les métiers</a></li>
+      <li><a href="remerciements.html">Remerciements</a></li>
+    </ul>
+  </nav>
+<!-- HEADER -->
+<header class="hdr">
+  <div class="badge"><span class="dot"></span>L'Usine du Web</div>
+  <h1><span class="hH">HTML</span>, <span class="hC">CSS</span> &amp; <span class="hJ">JavaScript</span></h1>
+  <p>Découvre les trois langages qui fabriquent chaque page web, grâce à une métaphore d'usine automobile.</p>
+</header>
+
+<!-- CARTES -->
+<section class="cards">
+  <div class="card-2">
+    <div class="ci">🏗️</div>
+    <div class="cn">HTML</div>
+    <div class="cf">HyperText Markup Language</div>
+    <p class="cd">Le HTML est le <strong>squelette</strong> de chaque page web. Sans lui, le navigateur n'a rien à afficher. Il a été inventé en 1991 par Tim Berners-Lee, le même homme qui a inventé le Web !</p>
+    <div class="pts">
+      <div class="pt"><div class="pico">📄</div><span><strong>Il structure le contenu</strong> : il dit au navigateur « voici le titre », « voici un paragraphe », « voici une image ».</span></div>
+      <div class="pt"><div class="pico">🏷️</div><span><strong>Il utilise des balises</strong> comme des étiquettes : <code style="font-family:'DM Mono',monospace;color:var(--cH)">&lt;h1&gt;</code>, <code style="font-family:'DM Mono',monospace;color:var(--cH)">&lt;p&gt;</code>, <code style="font-family:'DM Mono',monospace;color:var(--cH)">&lt;img&gt;</code>…</span></div>
+      <div class="pt"><div class="pico">🔗</div><span><strong>Il crée les liens</strong> entre les pages web — c'est pour ça qu'on l'appelle « HyperText » !</span></div>
+      <div class="pt"><div class="pico">🔍</div><span><strong>Il aide Google</strong> à comprendre de quoi parle votre site pour le référencer correctement.</span></div>
+    </div>
+    <div class="meta"><span class="mi">🚗</span><p>C'est la <strong>carrosserie en métal brut</strong> d'une voiture : la structure de base. Sans elle, pas de voiture. Elle est solide mais encore grise et sans vie.</p></div>
+    <div class="chips"><span class="chip">&lt;h1&gt;Titre&lt;/h1&gt;</span><span class="chip">&lt;p&gt;Texte&lt;/p&gt;</span><span class="chip">&lt;img&gt;</span><span class="chip">&lt;a href=""&gt;</span><span class="chip">&lt;div&gt;</span><span class="chip">&lt;nav&gt;</span></div>
+  </div>
+  <div class="card-2">
+    <div class="ci">🎨</div>
+    <div class="cn">CSS</div>
+    <div class="cf">Cascading Style Sheets</div>
+    <p class="cd">Le CSS gère <strong>l'apparence visuelle</strong> de la page. Sans lui, toutes les pages web seraient du texte noir sur fond blanc — extrêmement ennuyeux !</p>
+    <div class="pts">
+      <div class="pt"><div class="pico">🎨</div><span><strong>Il définit les couleurs</strong>, les polices, les tailles, les marges et les espacements de chaque élément.</span></div>
+      <div class="pt"><div class="pico">📱</div><span><strong>Il rend les pages responsive</strong> : le site s'adapte automatiquement au téléphone, tablette ou PC.</span></div>
+      <div class="pt"><div class="pico">✨</div><span><strong>Il crée des animations</strong> : effets au survol, transitions douces, rotations, apparitions...</span></div>
+      <div class="pt"><div class="pico">🗂️</div><span><strong>Un seul fichier .css</strong> peut styler des milliers de pages en même temps — très puissant !</span></div>
+    </div>
+    <div class="meta"><span class="mi">🖌️</span><p>C'est la <strong>peinture rouge et la déco</strong> de la voiture : couleurs, vitres teintées, jantes chromées. La structure existe déjà — CSS la rend belle !</p></div>
+    <div class="chips"><span class="chip">color: red</span><span class="chip">font-size: 18px</span><span class="chip">background</span><span class="chip">animation</span><span class="chip">@media</span><span class="chip">border-radius</span></div>
+  </div>
+  <div class="card-2">
+    <div class="ci">⚡</div>
+    <div class="cn">JavaScript</div>
+    <div class="cf">Le langage de l'interactivité</div>
+    <p class="cd">JavaScript donne <strong>vie et intelligence</strong> à la page. C'est le seul langage de programmation compris directement par le navigateur, sans rien installer !</p>
+    <div class="pts">
+      <div class="pt"><div class="pico">🖱️</div><span><strong>Il gère les interactions</strong> : clics, glisser-déposer, saisie clavier, mouvements de souris.</span></div>
+      <div class="pt"><div class="pico">🔄</div><span><strong>Il modifie la page en direct</strong> sans recharger — comme les likes sur Instagram !</span></div>
+      <div class="pt"><div class="pico">🌐</div><span><strong>Il parle avec les serveurs</strong> pour charger des données : météo, actualités, vidéos...</span></div>
+      <div class="pt"><div class="pico">🤖</div><span><strong>Il peut faire de l'IA</strong> directement dans le navigateur : reconnaissance vocale, chatbots...</span></div>
+    </div>
+    <div class="meta"><span class="mi">🔧</span><p>C'est le <strong>moteur et les roues</strong> de la voiture : ce qui la fait bouger, accélérer, freiner. Sans JS, la page est belle mais ne fait rien du tout !</p></div>
+    <div class="chips"><span class="chip">addEventListener</span><span class="chip">if / else</span><span class="chip">fetch(API)</span><span class="chip">setTimeout</span><span class="chip">getElementById</span><span class="chip">forEach()</span></div>
+  </div>
+</section>
+
+<!-- USINE -->
+<section class="factory">
+  <h2>🏭 L'Usine du Web en action</h2>
+  <p class="fsub">La pince robotique va assembler les 3 langages pour fabriquer une page web complète !</p>
+  <div class="nbox"><p id="nTxt">Clique sur <strong>▶ Lancer la fabrication</strong> pour voir HTML, CSS et JavaScript s'assembler en direct !</p></div>
+  <div class="btns">
+    <button class="btn bp" id="btnPlay" onclick="startAnim()">▶ Lancer la fabrication</button>
+    <button class="btn br2" id="btnReset" onclick="resetAnim()">↺ Recommencer</button>
+  </div>
+  <div class="steps">
+    <div class="step" id="st0"><span class="sn">1</span> HTML – Squelette</div>
+    <div class="step" id="st1"><span class="sn">2</span> CSS – Peinture</div>
+    <div class="step" id="st2"><span class="sn">3</span> JS – Moteur</div>
+    <div class="step" id="st3"><span class="sn">4</span> En route !</div>
+  </div>
+  <div id="scene">
+    <div class="rail"></div>
+    <div id="crane">
+      <div class="cBody"></div>
+      <div id="craneArm">
+        <div class="clawHead">
+          <div id="fL"></div><div id="fR"></div>
+        </div>
+        <div id="heldToken"></div>
+      </div>
+    </div>
+    <div id="stockZone">
+      <div class="stockLabel">STOCK</div>
+      <div class="stk" id="sH">HTML</div>
+      <div class="stk" id="sC">CSS</div>
+      <div class="stk" id="sJ">JS</div>
+    </div>
+    <div class="belt"></div>
+    <div class="floor"></div>
+    <div id="platform"></div>
+    <div id="car">
+      <svg class="cSvg" viewBox="0 0 260 96" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="gBody" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2e4060"/><stop offset="100%" stop-color="#1a2e48"/></linearGradient>
+          <linearGradient id="gRoof" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#263650"/><stop offset="100%" stop-color="#1c2c44"/></linearGradient>
+          <linearGradient id="gBodyR" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e53030"/><stop offset="100%" stop-color="#b01e1e"/></linearGradient>
+          <linearGradient id="gRoofR" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#c42020"/><stop offset="100%" stop-color="#961818"/></linearGradient>
+          <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity=".4"/></filter>
+        </defs>
+        <ellipse cx="130" cy="93" rx="100" ry="5" fill="rgba(0,0,0,.4)"/>
+        <rect id="vBody" x="4" y="46" width="252" height="44" rx="10" fill="url(#gBody)" filter="url(#shadow)"/>
+        <path id="vRoof" d="M62 46 L88 14 L172 14 L198 46 Z" fill="url(#gRoof)"/>
+        <rect id="vStripe" x="4" y="68" width="252" height="4" rx="2" fill="rgba(255,255,255,.15)"/>
+        <path id="vGlA" d="M174 42 L196 42 L172 14 Z" fill="#1a2638" opacity=".9"/>
+        <rect id="vGlB" x="92" y="17" width="76" height="27" rx="4" fill="#1a2638" opacity=".9"/>
+        <path id="vGlC" d="M65 42 L87 42 L88 14 Z" fill="#1a2638" opacity=".9"/>
+        <ellipse id="vHL" cx="247" cy="64" rx="9" ry="5" fill="#303848"/>
+        <ellipse id="vTL" cx="13" cy="64" rx="8" ry="5" fill="#303848"/>
+        <rect x="240" y="58" width="16" height="3" rx="1.5" fill="#1e3050"/>
+        <rect x="240" y="63" width="16" height="3" rx="1.5" fill="#1e3050"/>
+        <rect x="240" y="68" width="16" height="3" rx="1.5" fill="#1e3050"/>
+        <rect x="4" y="82" width="252" height="8" rx="4" fill="#0f1e34" opacity=".6"/>
+        <rect x="108" y="63" width="20" height="5" rx="2.5" fill="#1a2638"/>
+        <circle id="vRim1" cx="52" cy="90" r="0" fill="#556070" stroke="#778090" stroke-width="2"/>
+        <circle id="vRim2" cx="208" cy="90" r="0" fill="#556070" stroke="#778090" stroke-width="2"/>
+        <path d="M88 14 L172 14" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+      </svg>
+      <div class="wheel" id="wF"></div>
+      <div class="wheel" id="wR"></div>
+      <div id="exhaust"><div class="xp"></div><div class="xp"></div><div class="xp"></div></div>
+    </div>
+    <div id="brushes">
+      <div class="br">🖌️</div><div class="br">🖌️</div><div class="br">🖌️</div>
+      <div class="pot">🪣</div><div class="pot">🪣</div>
+    </div>
+    <div id="bubble">
+      <div id="bubTitle"></div>
+      <div id="bubText"></div>
+      <button id="btnNext">Suivant ▶</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     DICTIONNAIRE DES BALISES HTML
+══════════════════════════════════════════ -->
+<section class="dico-section">
+  <h2>📖 Dictionnaire des balises HTML</h2>
+  <p class="dico-sub">Chaque balise HTML vient d'un vrai mot anglais. Clique sur une balise pour voir son code et son rendu en direct !</p>
+
+  <div class="dico-wrapper">
+
+    <!-- ── Liste des balises ── -->
+    <div class="dico-list">
+
+      <div class="dico-item" onclick="showTag('p')" id="item-p">
+        <div class="dico-tag">&lt;p&gt;</div>
+        <div class="dico-label">
+          <span class="dico-en">Paragraph</span>
+          <span class="dico-fr">Paragraphe — un bloc de texte</span>
+        </div>
+        <span class="dico-arrow">→</span>
+      </div>
+
+      <div class="dico-item" onclick="showTag('a')" id="item-a">
+        <div class="dico-tag">&lt;a&gt;</div>
+        <div class="dico-label">
+          <span class="dico-en">Anchor</span>
+          <span class="dico-fr">Ancre — crée un lien cliquable</span>
+        </div>
+        <span class="dico-arrow">→</span>
+      </div>
+
+      <div class="dico-item" onclick="showTag('u')" id="item-u">
+        <div class="dico-tag">&lt;u&gt;</div>
+        <div class="dico-label">
+          <span class="dico-en">Underline</span>
+          <span class="dico-fr">Souligné — souligne le texte</span>
+        </div>
+        <span class="dico-arrow">→</span>
+      </div>
+
+      <div class="dico-item" onclick="showTag('i')" id="item-i">
+        <div class="dico-tag">&lt;i&gt;</div>
+        <div class="dico-label">
+          <span class="dico-en">Italic</span>
+          <span class="dico-fr">Italique — met le texte en italique</span>
+        </div>
+        <span class="dico-arrow">→</span>
+      </div>
+
+      <div class="dico-item" onclick="showTag('b')" id="item-b">
+        <div class="dico-tag">&lt;b&gt;</div>
+        <div class="dico-label">
+          <span class="dico-en">Bold</span>
+          <span class="dico-fr">Gras — met le texte en gras</span>
+        </div>
+        <span class="dico-arrow">→</span>
+      </div>
+
+      <div class="dico-item" onclick="showTag('h1')" id="item-h1">
+        <div class="dico-tag">&lt;h1&gt;</div>
+        <div class="dico-label">
+          <span class="dico-en">Heading 1</span>
+          <span class="dico-fr">Titre principal — le plus grand titre de la page</span>
+        </div>
+        <span class="dico-arrow">→</span>
+      </div>
+
+      <div class="dico-item" onclick="showTag('h2')" id="item-h2">
+        <div class="dico-tag">&lt;h2&gt;</div>
+        <div class="dico-label">
+          <span class="dico-en">Heading 2</span>
+          <span class="dico-fr">Sous-titre — titre de niveau 2</span>
+        </div>
+        <span class="dico-arrow">→</span>
+      </div>
+
+    </div>
+
+    <!-- ── Panneau de préview ── -->
+    <div class="dico-preview" id="dico-preview">
+
+      <!-- Placeholder (avant tout clic) -->
+      <div class="preview-placeholder" id="dico-placeholder">
+        <div class="ph-icon">👆</div>
+        <p>Clique sur une balise à gauche pour voir son code et son rendu en direct !</p>
+      </div>
+
+      <!-- Contenu dynamique -->
+      <div id="dico-content">
+        <div class="preview-header">
+          <span class="ph-tag" id="ph-tag-label"></span>
+          <span class="ph-title" id="ph-title"></span>
+          <span class="ph-sub" id="ph-sub"></span>
+        </div>
+        <div class="preview-code" id="preview-code"></div>
+        <div class="preview-render">
+          <div class="preview-label">✦ Rendu dans le navigateur</div>
+          <div class="render-box">
+            <div id="render-output"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<script>
+/* ══════════════════════════════════════
+   USINE – logique originale
+══════════════════════════════════════ */
+const el = id => document.getElementById(id);
+const scene = el('scene');
+let timers = [], animId = null, isRunning = false;
+
+function wait(ms){ return new Promise(r=>{ timers.push(setTimeout(r,ms)); }); }
+function waitForNext(){
+  return new Promise(resolve=>{
+    const btn=el('btnNext');
+    function onClick(){ btn.removeEventListener('click',onClick); resolve(); }
+    btn.addEventListener('click',onClick);
+  });
+}
+function say(html){ el('nTxt').innerHTML=html; }
+function setStep(n){ for(let i=0;i<4;i++){ el('st'+i).classList.toggle('active',i===n); el('st'+i).classList.toggle('done',i<n); } }
+function showBubble(title,html,color){
+  const b=el('bubble'); b.style.borderColor=color;
+  el('bubTitle').style.color=color; el('bubTitle').textContent=title;
+  el('bubText').innerHTML=html;
+  const btn=el('btnNext'); btn.style.background=color; btn.style.color=(color==='#facc15')?'#000':'#fff';
+  b.classList.add('show');
+}
+function hideBubble(){ el('bubble').classList.remove('show'); }
+
+let craneX=0;
+function moveCrane(tx,ms){
+  return new Promise(r=>{
+    if(animId) cancelAnimationFrame(animId);
+    const sx=craneX, t0=performance.now();
+    function tick(now){
+      const p=Math.min((now-t0)/ms,1), e=p<.5?2*p*p:-1+(4-2*p)*p;
+      craneX=sx+(tx-sx)*e; el('crane').style.left=craneX+'px';
+      if(p<1){ animId=requestAnimationFrame(tick); } else { craneX=tx; el('crane').style.left=tx+'px'; r(); }
+    }
+    animId=requestAnimationFrame(tick);
+  });
+}
+function setArm(px,ms=900){ el('craneArm').style.transition=`height ${ms}ms cubic-bezier(.4,0,.2,1)`; el('craneArm').style.height=px+'px'; return wait(ms+80); }
+function liftArm(){ return setArm(80); }
+function closeClaw(){ el('crane').classList.add('closed'); }
+function openClaw(){ el('crane').classList.remove('closed'); }
+function showToken(txt,color){ const t=el('heldToken'); t.textContent=txt; t.style.color=color; t.style.borderColor=color; t.style.background=color+'1e'; t.classList.add('show'); }
+function hideToken(){ el('heldToken').classList.remove('show'); }
+function getCenter(elem){ const sr=scene.getBoundingClientRect(), er=elem.getBoundingClientRect(); return { x:er.left+er.width/2-sr.left, y:er.top+er.height/2-sr.top }; }
+function armForToken(y){ return Math.max(60,y-14-18-8); }
+function armForPlatform(){ const sr=scene.getBoundingClientRect(), pr=el('platform').getBoundingClientRect(); return Math.max(80,pr.top-sr.top-14-18-8); }
+function spawnSmoke(cx,cy,n=8){ for(let i=0;i<n;i++){ const s=document.createElement('div'); s.className='smoke'; const sz=18+Math.random()*24; s.style.cssText=`width:${sz}px;height:${sz}px;left:${cx+(Math.random()-.5)*60}px;top:${cy+(Math.random()-.5)*25}px;animation-delay:${i*.13}s`; scene.appendChild(s); timers.push(setTimeout(()=>s.remove(),2200)); } }
+function spawnSparks(cx,cy,n=22){ for(let i=0;i<n;i++){ const s=document.createElement('div'); s.className='spark'; const a=(Math.PI*2/n)*i, d=28+Math.random()*44; s.style.cssText=`left:${cx}px;top:${cy}px;--dx:${Math.cos(a)*d}px;--dy:${Math.sin(a)*d}px;animation-delay:${Math.random()*.2}s`; scene.appendChild(s); timers.push(setTimeout(()=>s.remove(),1300)); } }
+function spawnConfetti(n=40){ const cols=['#f97316','#3b82f6','#facc15','#22c55e','#f472b6','#a78bfa']; for(let i=0;i<n;i++){ const c=document.createElement('div'); c.className='conf'; c.style.cssText=`left:${5+Math.random()*90}%;top:${Math.random()*55}%;background:${cols[i%cols.length]};animation-delay:${Math.random()*.9}s`; scene.appendChild(c); timers.push(setTimeout(()=>c.remove(),2500)); } }
+
+async function startAnim(){
+  if(isRunning) return;
+  isRunning=true; el('btnPlay').disabled=true; el('btnReset').disabled=true;
+  resetVisuals(); await wait(200);
+  const scW=scene.clientWidth;
+  const posH=getCenter(el('sH')), posC=getCenter(el('sC')), posJ=getCenter(el('sJ'));
+  const platX=scW/2;
+  craneX=posH.x; el('crane').style.left=craneX+'px';
+
+  setStep(0); say('🏗️ La pince se déplace vers le token <span class="tH">HTML</span> dans le stock...');
+  await moveCrane(posH.x,900); await setArm(armForToken(posH.y));
+  closeClaw(); await wait(300); showToken('HTML','#f97316'); el('sH').classList.add('used'); await wait(200); await liftArm();
+  say('La pince transporte <span class="tH">HTML</span> vers la zone d\'assemblage...');
+  await moveCrane(platX,1500); await setArm(armForPlatform()); await wait(300); openClaw(); hideToken();
+  const platRect=el('platform').getBoundingClientRect(), scRect=scene.getBoundingClientRect(), platScY=platRect.top-scRect.top;
+  spawnSmoke(platX,platScY-20,10); await wait(500); await liftArm(); await wait(700);
+  el('car').style.opacity='1'; spawnSmoke(platX,platScY-40,7); await wait(1000);
+  showBubble('🏗️ HTML = Le squelette du code','Vous voyez la carrosserie grise qui vient d\'apparaître ? C\'est exactement ce que fait le HTML sur une page web.<br><br>Le navigateur lit le HTML de haut en bas, balise par balise, et construit la page comme un ouvrier qui assemble des pièces en métal. Chaque balise a un rôle précis : <code style="color:#f97316;font-family:monospace">&lt;h1&gt;</code> pour les titres, <code style="color:#f97316;font-family:monospace">&lt;p&gt;</code> pour le texte, <code style="color:#f97316;font-family:monospace">&lt;img&gt;</code> pour les images...<br><br>💡 <em>Fun fact : le tout premier site web, créé en 1991, n\'avait que du HTML. Pas de couleurs, pas d\'animations — juste du texte noir sur fond blanc !</em>','#f97316');
+  await waitForNext(); hideBubble(); await wait(500);
+
+  setStep(1); say('🎨 La pince repart chercher le token <span class="tC">CSS</span>...');
+  await moveCrane(posC.x,1200); await setArm(armForToken(posC.y));
+  closeClaw(); await wait(300); showToken('CSS','#3b82f6'); el('sC').classList.add('used'); await wait(200); await liftArm();
+  say('Le token <span class="tC">CSS</span> arrive sur la voiture...');
+  await moveCrane(platX,1500); await setArm(armForPlatform()); await wait(300); openClaw(); hideToken(); await liftArm();
+  el('brushes').classList.add('show');
+  say('🖌️ Les pinceaux <span class="tC">CSS</span> entrent en action, la voiture se transforme...'); await wait(1000);
+  el('vBody').setAttribute('fill','url(#gBodyR)'); el('vRoof').setAttribute('fill','url(#gRoofR)');
+  el('vGlA').setAttribute('fill','#5b9bd5'); el('vGlB').setAttribute('fill','#5b9bd5'); el('vGlC').setAttribute('fill','#5b9bd5');
+  el('vHL').setAttribute('fill','#fef08a'); el('vTL').setAttribute('fill','#f87171'); el('vStripe').style.opacity='1';
+  await wait(2500); el('brushes').classList.remove('show'); el('car').classList.add('painted');
+  showBubble('🎨 CSS = La peinture du code','Vous voyez la transformation ? En quelques lignes de CSS, la carrosserie grise est devenue une belle voiture rouge avec des vitres bleues et des phares jaunes.<br><br>Sur une vraie page web, c\'est pareil : une seule règle CSS peut changer instantanément l\'apparence de milliers d\'éléments. Par exemple :<br><code style="color:#3b82f6;font-family:monospace">color: red</code> → tout le texte devient rouge<br><code style="color:#3b82f6;font-family:monospace">font-size: 24px</code> → la taille change<br><br>💡 <em>Le CSS est aussi responsable de rendre les sites adaptés aux téléphones — c\'est le "responsive design" !</em>','#3b82f6');
+  await waitForNext(); hideBubble(); await wait(500);
+
+  setStep(2); say('⚡ La pince prend le dernier token : <span class="tJ">JavaScript</span>...');
+  await moveCrane(posJ.x,1200); await setArm(armForToken(posJ.y));
+  closeClaw(); await wait(300); showToken('JS','#facc15'); el('sJ').classList.add('used'); await wait(200); await liftArm();
+  say('<span class="tJ">JavaScript</span> arrive sur la voiture, le moteur va démarrer !');
+  await moveCrane(platX,1500); await setArm(armForPlatform()-20); await wait(300); openClaw(); hideToken();
+  const carR=el('car').getBoundingClientRect(), scR2=scene.getBoundingClientRect();
+  const carCX=carR.left+carR.width/2-scR2.left, carCY=carR.top+carR.height/2-scR2.top;
+  spawnSparks(carCX,carCY+10); await wait(350); spawnSparks(carCX-30,carCY); await wait(250); spawnSparks(carCX+30,carCY);
+  await liftArm(); await wait(500);
+  el('wF').classList.add('show'); el('wR').classList.add('show'); await wait(500);
+  el('exhaust').style.opacity='1';
+  say('🔊 Le moteur ronronne... <span class="tJ">JavaScript</span> donne vie à la page !');
+  showBubble('⚡ JavaScript = Le moteur du code','Les roues tournent, le pot d\'échappement fume... la voiture est vivante ! C\'est exactement ce que JavaScript fait à une page web.<br><br>Sans JavaScript, vous pourriez regarder une page, mais pas interagir avec elle. Pas de formulaires, pas de recherche en direct, pas de notifications, pas de jeux dans le navigateur...<br><br>Tous les sites que vous utilisez au quotidien — YouTube, TikTok, Google Maps — utilisent des centaines de milliers de lignes de JavaScript pour fonctionner.<br><br>💡 <em>JavaScript a été créé en seulement 10 jours en 1995 par Brendan Eich. Aujourd\'hui c\'est le langage le plus utilisé au monde !</em>','#facc15');
+  await waitForNext(); hideBubble(); await wait(500);
+
+  setStep(3); say('🚗 Page complète ! <span class="tH">HTML</span> + <span class="tC">CSS</span> + <span class="tJ">JS</span> = une vraie page web vivante. Elle sort de l\'usine !');
+  await moveCrane(scW*.85,900);
+  el('wF').classList.add('spin'); el('wR').classList.add('spin'); await wait(800);
+  const carCurLeft=scW/2-130, car=el('car');
+  car.style.transition='none'; car.style.transform='none'; car.style.left=carCurLeft+'px';
+  await wait(40);
+  car.style.transition='left 2.8s cubic-bezier(.4,0,.8,.2)'; car.style.left=(scW+100)+'px';
+  await wait(2100); car.style.transition+=', opacity .5s'; car.style.opacity='0'; await wait(600);
+  spawnConfetti();
+  for(let i=0;i<4;i++) el('st'+i).classList.add('done');
+  say('🎉 <span class="tG">Bravo !</span> Vous savez maintenant : <span class="tH">HTML</span> = le squelette · <span class="tC">CSS</span> = l\'apparence · <span class="tJ">JavaScript</span> = la vie. Ensemble ils fabriquent chaque page web que vous visitez !');
+  isRunning=false; el('btnPlay').disabled=false; el('btnReset').disabled=false;
+}
+
+function resetVisuals(){
+  timers.forEach(t=>clearTimeout(t)); timers=[];
+  if(animId) cancelAnimationFrame(animId); animId=null;
+  const posH=getCenter(el('sH')); craneX=posH.x; el('crane').style.left=craneX+'px';
+  el('craneArm').style.transition='none'; el('craneArm').style.height='80px';
+  openClaw(); hideToken();
+  const car=el('car'); car.style.transition='none'; car.style.opacity='0'; car.style.transform='translateX(-50%)'; car.style.left='50%';
+  car.classList.remove('painted');
+  el('vBody').setAttribute('fill','url(#gBody)'); el('vRoof').setAttribute('fill','url(#gRoof)');
+  el('vGlA').setAttribute('fill','#1a2638'); el('vGlB').setAttribute('fill','#1a2638'); el('vGlC').setAttribute('fill','#1a2638');
+  el('vHL').setAttribute('fill','#303848'); el('vTL').setAttribute('fill','#303848'); el('vStripe').style.opacity='0';
+  el('wF').className='wheel'; el('wR').className='wheel'; el('exhaust').style.opacity='0';
+  el('brushes').classList.remove('show'); hideBubble();
+  scene.querySelectorAll('.smoke,.spark,.conf').forEach(e=>e.remove());
+  ['sH','sC','sJ'].forEach(id=>el(id).classList.remove('used'));
+  for(let i=0;i<4;i++) el('st'+i).classList.remove('active','done');
+}
+
+function resetAnim(){
+  isRunning=false; el('btnPlay').disabled=false; el('btnReset').disabled=false;
+  resetVisuals();
+  say('Clique sur <strong>▶ Lancer la fabrication</strong> pour voir HTML, CSS et JavaScript s\'assembler en direct !');
+}
+
+window.addEventListener('load', ()=>{ resetVisuals(); });
+
+
+/* ══════════════════════════════════════
+   DICTIONNAIRE DES BALISES – logique
+══════════════════════════════════════ */
+const TAGS = {
+  p: {
+    name: 'Paragraph',
+    sub:  'Texte courant',
+    code: `<span class="ck">&lt;p&gt;</span><span class="ct">Bonjour ! Je suis un paragraphe.</span><span class="ck">&lt;/p&gt;</span>`,
+    cls:  'rp',
+    html: '<p>Bonjour&nbsp;! Je suis un paragraphe. En HTML, on utilise &lt;p&gt; pour écrire du texte normal, comme dans un journal ou un livre.</p> <p>Je suis un autre paragraphe. En HTML, on utilise &lt;p&gt; pour écrire du texte normal, comme dans un journal ou un livre</p>',
+  },
+  a: {
+    name: 'Anchor',
+    sub:  'Lien cliquable',
+    code: `<span class="ck">&lt;a</span> <span class="cv">href</span>=<span class="cs">"https://google.com"</span><span class="ck">&gt;</span><span class="ct">Clique ici !</span><span class="ck">&lt;/a&gt;</span>`,
+    cls:  'ra',
+    html: '🔗 Clique ici pour visiter un site !',
+  },
+  u: {
+    name: 'Underline',
+    sub:  'Texte souligné',
+    code: `<span class="ck">&lt;u&gt;</span><span class="ct">Ce texte est souligné</span><span class="ck">&lt;/u&gt;</span>`,
+    cls:  'ru',
+    html: 'Ce texte est souligné grâce à la balise &lt;u&gt;.',
+  },
+  i: {
+    name: 'Italic',
+    sub:  'Texte en italique',
+    code: `<span class="ck">&lt;i&gt;</span><span class="ct">Ce texte est en italique</span><span class="ck">&lt;/i&gt;</span>`,
+    cls:  'ri',
+    html: 'Ce texte est en italique grâce à la balise &lt;i&gt;.',
+  },
+  b: {
+    name: 'Bold',
+    sub:  'Texte en gras',
+    code: `<span class="ck">&lt;b&gt;</span><span class="ct">Ce texte est en gras</span><span class="ck">&lt;/b&gt;</span>`,
+    cls:  'rb',
+    html: 'Ce texte est en gras grâce à la balise &lt;b&gt;.',
+  },
+  h1: {
+    name: 'Heading 1',
+    sub:  'Titre principal',
+    code: `<span class="ck">&lt;h1&gt;</span><span class="ct">Mon grand titre</span><span class="ck">&lt;/h1&gt;</span>`,
+    cls:  'rh1',
+    html: 'Mon grand titre',
+  },
+  h2: {
+    name: 'Heading 2',
+    sub:  'Sous-titre',
+    code: `<span class="ck">&lt;h2&gt;</span><span class="ct">Mon sous-titre</span><span class="ck">&lt;/h2&gt;</span>`,
+    cls:  'rh2',
+    html: 'Mon sous-titre de niveau 2',
+  },
+};
+
+let activeTag = null;
+
+function showTag(key) {
+  const data = TAGS[key];
+  if (!data) return;
+
+  // Mettre à jour l'item actif
+  if (activeTag) el('item-' + activeTag).classList.remove('active');
+  el('item-' + key).classList.add('active');
+  activeTag = key;
+
+  // Remplir le header
+  el('ph-tag-label').innerHTML = '&lt;' + key + '&gt;';
+  el('ph-title').textContent   = data.name;
+  el('ph-sub').textContent     = data.sub;
+
+  // Code
+  el('preview-code').innerHTML = data.code;
+
+  // Rendu avec animation
+  const out = el('render-output');
+  out.className = '';
+  out.offsetHeight; // force reflow pour relancer l'animation
+  out.className = data.cls + ' pop';
+  out.innerHTML = data.html;
+
+  // Afficher le contenu, masquer le placeholder
+  el('dico-placeholder').style.display = 'none';
+  el('dico-content').style.display     = 'flex';
+}
+</script>
+
+  <!-- ─── FOOTER ─── -->
+  <footer>
+    <nav class="footer-nav">
+      <a href="index.html">Accueil</a>
+      <a href="histoires-web.html">L'histoire du web</a>
+      <a href="HTML-CSS-JS.html">Les langages</a>
+      <a href="architecture-web.html">Le WEB</a>
+      <a href="metiers-du-web.html">Les métiers</a>
+      <a href="remerciements.html">Remerciements</a>
+    </nav>
+    <p class="footer-copy">Fait avec <span>♥</span> dans le cadre de mon stage de troisième &nbsp;·&nbsp; 2025/2026</p>
+  </footer>
+
+</body>
+</html>
