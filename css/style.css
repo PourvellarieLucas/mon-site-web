@@ -1,13 +1,52 @@
 :root {
-      --bg: #0a0a12;
-      --accent1: #6c63ff;
-      --accent2: #ff6584;
-      --accent3: #43e8d8;
-      --text: #f0f0ff;
-      --muted: #7a7a9a;
-      --card-bg: rgba(255,255,255,0.04);
-      --card-border: rgba(255,255,255,0.08);
-    }
+  /* ─── Palette globale ─── */
+  --bg:          #080d1a;
+  --text:        #e8edf5;
+  --muted:       #5a7a9a;
+  --accent1:     #6c63ff;
+  --accent2:     #ff6584;
+  --accent3:     #43e8d8;
+  --card-bg:     rgba(255,255,255,0.04);
+  --card-border: rgba(255,255,255,0.08);
+
+  /* ─── Architecture web ─── */
+  --bg-dark:        #080d1a;
+  --bg-card:        #0f1829;
+  --bg-card-hover:  #141f35;
+  --accent-blue:    #4f9cf7;
+  --accent-green:   #1ED35A;
+  --accent-orange:  #ff8c42;
+  --accent-red:     #ff4d6a;
+  --accent-purple:  #a855f7;
+  --accent-cyan:    #22d3ee;
+  --text-primary:   #e8edf5;
+  --text-secondary: #8899b4;
+
+  /* ─── Histoires du web ─── */
+  --acc:  #00c8f8;
+  --acc2: #f97316;
+  --acc3: #a855f7;
+  --card: #0f1e35;
+
+  /* ─── HTML / CSS / JS ─── */
+  --bord: #1e3050;
+  --cH:   #f97316;
+  --cC:   #3b82f6;
+  --cJ:   #facc15;
+  --cG:   #22c55e;
+
+  /* ─── Métiers du web ─── */
+  --border:      #1e2d47;
+  --border-glow: #2a3f5f;
+  --blue:        #4f9cf7;
+  --green:       #1ED35A;
+  --orange:      #ff8c42;
+  --purple:      #a855f7;
+  --cyan:        #22d3ee;
+  --pink:        #f472b6;
+  --yellow:      #fbbf24;
+  --text-muted:  #4a5568;
+}
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -541,14 +580,6 @@
 
 
 
-            *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --bg-dark: #0f1729; --bg-card: #1a2540;
-            --accent-blue: #4f9cf7; --accent-green: #1ED35A;
-            --accent-orange: #ff8c42; --accent-red: #ff4d6a;
-            --accent-purple: #a855f7; --accent-cyan: #22d3ee;
-            --text-primary: #e8edf5; --text-secondary: #8899b4;
-        }
         body { font-family: 'DM Sans', sans-serif; background: var(--bg-dark); color: var(--text-primary); overflow-x: hidden; min-height: 100vh; }
         .page-header { text-align: center; padding: 40px 20px 20px; margin-top: 80px;}
         .page-header h1 { font-family: 'Syne', sans-serif; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 900; background: linear-gradient(135deg, var(--accent-blue), var(--accent-green)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 8px; }
@@ -821,15 +852,6 @@
 /* ══════════════════════════════════════════════════════
    PAGE : HISTOIRES DU WEB (histoires-web.html)
 ══════════════════════════════════════════════════════ */
-
-/* Variables supplémentaires partagées */
-:root {
-  --acc:   #00c8f8;
-  --acc2:  #f97316;
-  --acc3:  #a855f7;
-  --green: #22c55e;
-  --card:  rgba(5,16,38,0.95);
-}
 
 /* Mise en page plein écran – scopée à cette page */
 html:has(body.page-histoires) { height: 100%; overflow: hidden; }
@@ -1188,17 +1210,6 @@ body.page-histoires {
 
 
 
-        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-:root {
-  --bg:#07111f; --card:#0f1e35; --bord:#1e3050;
-  --text:#dce8f5; --muted:#5a7a9a;
-  --cH:#f97316; --cC:#3b82f6; --cJ:#facc15; --cG:#22c55e;
-        --accent1: #6c63ff;
-      --accent2: #ff6584;
-      --accent3: #43e8d8;
-}
-
-body { font-family:'DM Sans',sans-serif; background:var(--bg); color:var(--text); overflow-x:hidden; }
 .hdr { text-align:center; padding:56px 20px 40px; }
 .badge { display:inline-flex; align-items:center; gap:8px; font-family:'DM Mono',monospace; font-size:.68rem; letter-spacing:2px; text-transform:uppercase; color:var(--cC); border:1px solid rgba(59,130,246,.3); background:rgba(59,130,246,.07); padding:5px 18px; border-radius:30px; margin-bottom:20px; animation:up .6s .2s both; }
 .dot { width:5px; height:5px; background:var(--cG); border-radius:50%; animation:blink 2s infinite; }
@@ -1550,36 +1561,7 @@ body { font-family:'DM Sans',sans-serif; background:var(--bg); color:var(--text)
 
 
 
-     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-        :root {
-            --bg-dark:    #080d1a;
-            --bg-card:    #0f1829;
-            --bg-card-hover: #141f35;
-            --border:     #1e2d47;
-            --border-glow:#2a3f5f;
-
-            --blue:   #4f9cf7;
-            --green:  #1ED35A;
-            --orange: #ff8c42;
-            --purple: #a855f7;
-            --cyan:   #22d3ee;
-            --pink:   #f472b6;
-            --yellow: #fbbf24;
-
-            --text-primary:   #e8edf5;
-            --text-secondary: #8899b4;
-            --text-muted:     #4a5568;
-        }
-
         /* ===== BASE ===== */
-        body {
-            font-family: 'DM Sans', sans-serif;
-            background: var(--bg-dark);
-            color: var(--text-primary);
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
 
         /* Grille de fond animée */
         body::before {
@@ -1640,11 +1622,6 @@ body { font-family:'DM Sans',sans-serif; background:var(--bg); color:var(--text)
             border-radius: 50%;
             animation: pulse 2s infinite;
         }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50%       { opacity: 0.4; transform: scale(0.7); }
-        }
-
         .header h1 {
             font-family: 'Syne', sans-serif;
             font-size: clamp(2.4rem, 6vw, 4.2rem);
