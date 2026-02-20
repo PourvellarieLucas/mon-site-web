@@ -885,7 +885,7 @@ body.page-histoires {
 /* ── HEADER ── */
 .hdr {
   flex-shrink: 0;
-  padding: 14px 28px 6px;
+  padding: 80px 28px 6px;
   display: flex; align-items: center; justify-content: space-between;
   border-bottom: 1px solid rgba(0,200,248,.08);
 }
@@ -906,7 +906,7 @@ body.page-histoires {
 }
 
 /* ── PANNEAU QUESTION ── */
-.q-area { flex-shrink: 0; padding: 140px 28px 8px; }
+.q-area { flex-shrink: 0; padding: 8px 28px 8px; }
 .q-label {
   font-family: 'Syne', sans-serif; font-size: .55rem;
   letter-spacing: 3px; text-transform: uppercase;
