@@ -1200,6 +1200,14 @@ body.page-histoires {
 }
 .btn-restart:hover { background: rgba(0,200,248,.18); }
 
+#finishScreen footer {
+  margin-top: 2.5rem;
+  border-top-color: rgba(0,200,248,0.15);
+}
+#finishScreen .footer-nav a { color: rgba(220,232,245,0.5); }
+#finishScreen .footer-nav a:hover { color: var(--acc); }
+#finishScreen .footer-copy { opacity: 0.4; }
+
 
 
 
