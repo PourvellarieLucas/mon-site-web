@@ -70,7 +70,7 @@
       <!-- Robot -->
       <div class="robot" id="robot">
         <div class="r-grp">
-          <div class="r-bub" id="rBub">🎤 Réponds-moi !</div>
+          <div class="r-bub" id="rBub">🎤 A toi de jouer Lucas!</div>
           <div class="r-head">
             <div class="r-eyes">
               <div class="r-eye"></div>
@@ -88,14 +88,23 @@
     </div>
   </div>
 
-  <!-- Bottom bar -->
-  <div class="bot-bar">
-    <button class="btn-next" id="btnNext" disabled onclick="nextStep()">
-      ✅ Date suivante ! &nbsp;→
-    </button>
-  </div>
+  <!-- Bouton caché (utilisé par le JS) -->
+  <button id="btnNext" disabled style="display:none"></button>
 
 </div>
+
+  <!-- ─── FOOTER ─── -->
+  <footer>
+    <nav class="footer-nav">
+      <a href="index.html">Accueil</a>
+      <a href="histoires-web.html">L'histoire du web</a>
+      <a href="HTML-CSS-JS.html">Les langages</a>
+      <a href="architecture-web.html">Le WEB</a>
+      <a href="metiers-du-web.html">Les métiers</a>
+      <a href="remerciements.html">Remerciements</a>
+    </nav>
+    <p class="footer-copy">Fait avec <span>♥</span> dans le cadre de mon stage de troisième &nbsp;·&nbsp; 2025/2026</p>
+  </footer>
 
 <script>
 /* ═══════════════════════════════════════
@@ -361,7 +370,8 @@ function updateProgress(i) {
 ═══════════════════════════════════════ */
 
 async function nextStep() {
-  if (isAnimating) return;
+  if (isAnimating || btnNext.disabled) return;
+  robot.classList.remove('clickable');
   if (currentStep >= EVENTS.length - 1) {
     showFinish();
     return;
@@ -395,11 +405,10 @@ async function doStep(i) {
   await delay(200);
   showQuestion(i);
 
-  // 5. Enable button
+  // 5. Activer le clic robot
   await delay(300);
-  const isLast = i === EVENTS.length - 1;
-  btnNext.textContent = isLast ? '🏁 Terminer la présentation' : '✅ Date suivante !  →';
   btnNext.disabled = false;
+  robot.classList.add('clickable');
 
   isAnimating = false;
 }
@@ -420,6 +429,9 @@ function showFinish() {
 ═══════════════════════════════════════ */
 robot.style.left = START_X + 'px';
 
+// Clic sur le robot → étape suivante
+robot.addEventListener('click', nextStep);
+
 // Démarrage automatique
 (async () => {
   btnNext.disabled = true;
@@ -428,18 +440,7 @@ robot.style.left = START_X + 'px';
 })();
 </script>
 
-  <!-- ─── FOOTER ─── -->
-  <footer>
-    <nav class="footer-nav">
-      <a href="index.html">Accueil</a>
-      <a href="histoires-web.html">L'histoire du web</a>
-      <a href="HTML-CSS-JS.html">Les langages</a>
-      <a href="architecture-web.html">Le WEB</a>
-      <a href="metiers-du-web.html">Les métiers</a>
-      <a href="remerciements.html">Remerciements</a>
-    </nav>
-    <p class="footer-copy">Fait avec <span>♥</span> dans le cadre de mon stage de troisième &nbsp;·&nbsp; 2025/2026</p>
-  </footer>
+
 
 </body>
 </html>
