@@ -654,6 +654,7 @@
             document.querySelectorAll('.card').forEach(card => {
                 if (filter === 'all' || card.getAttribute('data-category') === filter) {
                     card.classList.remove('hidden');
+                    card.style.animation = 'cardIn 0.2s forwards';
                 } else {
                     card.classList.add('hidden');
                 }
