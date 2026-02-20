@@ -117,6 +117,7 @@ const EVENTS = [
     color: '#f97316',
     title: 'ARPANET',
     desc: 'Premier réseau informatique',
+    bub: '🎤 C\'est parti ! À toi Lucas !',
     q: `Lucas, <strong>explique-leur</strong> comment <strong>ARPANET</strong>, le tout premier réseau informatique militaire américain, a relié 4 universités américaines en 1969 et posé les toutes premières bases d'internet !`
   },
   {
@@ -125,6 +126,7 @@ const EVENTS = [
     color: '#3b82f6',
     title: "Naissance d'Internet",
     desc: 'Le protocole TCP/IP adopté',
+    bub: '📡 TCP/IP... explique-leur !',
     q: `Lucas, <strong>raconte-leur</strong> pourquoi le <strong>1er janvier 1983</strong> est considéré comme la vraie date de naissance d'internet — le jour où le protocole <strong>TCP/IP</strong> a été adopté par tous les ordinateurs du réseau !`
   },
   {
@@ -133,6 +135,7 @@ const EVENTS = [
     color: '#8b5cf6',
     title: 'Le DNS',
     desc: 'Système de noms de domaine',
+    bub: '🔤 google.com... raconte !',
     q: `Lucas, <strong>explique-leur</strong> à quoi sert le <strong>DNS</strong> créé en 1984 — ce système magique qui te permet d'écrire <em>"google.com"</em> au lieu d'une longue suite de chiffres comme 172.217.16.142 !`
   },
   {
@@ -141,6 +144,7 @@ const EVENTS = [
     color: '#22c55e',
     title: 'HTTP & HTML',
     desc: 'Tim Berners-Lee invente le Web',
+    bub: '💡 Tim Berners-Lee... à toi !',
     q: `Lucas, <strong>raconte-leur</strong> comment <strong>Tim Berners-Lee</strong>, un ingénieur du CERN en Suisse, a inventé le <strong>HTTP</strong> et le <strong>HTML</strong> en 1989 et créé ainsi le World Wide Web que tout le monde utilise aujourd'hui !`
   },
   {
@@ -149,6 +153,7 @@ const EVENTS = [
     color: '#06b6d4',
     title: 'Premier site web',
     desc: 'Le web ouvert au public',
+    bub: '🌍 Le 1er site web ! Go Lucas !',
     q: `Lucas, <strong>explique-leur</strong> que le tout premier site web a été mis en ligne le <strong>6 août 1991</strong> par Tim Berners-Lee — une simple page qui expliquait ce qu'était le World Wide Web, et qui existe encore aujourd'hui !`
   },
   {
@@ -157,6 +162,7 @@ const EVENTS = [
     color: '#f59e0b',
     title: 'Navigateur Mosaic',
     desc: 'Premier navigateur avec images',
+    bub: '🖼️ Des images sur le web ! Raconte !',
     q: `Lucas, <strong>raconte-leur</strong> comment <strong>Mosaic</strong>, le premier navigateur graphique sorti en 1993, a tout changé en permettant pour la première fois d'afficher des images et de cliquer sur des liens colorés !`
   },
   {
@@ -165,6 +171,7 @@ const EVENTS = [
     color: '#ec4899',
     title: 'Amazon & eBay',
     desc: 'Naissance du e-commerce',
+    bub: '🛒 Amazon & eBay... à toi !',
     q: `Lucas, <strong>explique-leur</strong> comment <strong>Amazon</strong> et <strong>eBay</strong>, tous les deux nés en 1995, ont inventé le commerce sur internet et permis pour la première fois d'acheter et de vendre des produits en ligne !`
   },
   {
@@ -173,6 +180,7 @@ const EVENTS = [
     color: '#ef4444',
     title: 'Google',
     desc: 'Révolution de la recherche',
+    bub: '🔍 Google arrive ! Explique-leur !',
     q: `Lucas, <strong>raconte-leur</strong> comment <strong>Google</strong>, fondé en 1998 par deux étudiants de Stanford, a révolutionné la façon dont on cherche des informations sur internet et est devenu le moteur de recherche le plus utilisé au monde !`
   },
   {
@@ -181,6 +189,7 @@ const EVENTS = [
     color: '#00c8f8',
     title: 'Web 2.0',
     desc: 'Réseaux sociaux et blogs',
+    bub: '👥 Web 2.0... c\'est à toi !',
     q: `Lucas, <strong>explique-leur</strong> ce qu'est le <strong>Web 2.0</strong> apparu en 2004 — l'ère où les internautes ne lisent plus seulement le web, ils y participent : blogs, Facebook, YouTube, Wikipédia… tout le monde peut créer du contenu !`
   },
   {
@@ -189,6 +198,7 @@ const EVENTS = [
     color: '#a78bfa',
     title: "L'iPhone",
     desc: 'Internet dans toutes les poches',
+    bub: '📱 L\'iPhone ! Dis-leur tout !',
     q: `Lucas, <strong>raconte-leur</strong> comment l'<strong>iPhone</strong> présenté par Steve Jobs en janvier 2007 a tout révolutionné en mettant un vrai navigateur internet dans chaque poche — et en changeant à jamais notre façon d'utiliser le web !`
   },
   {
@@ -197,6 +207,7 @@ const EVENTS = [
     color: '#34d399',
     title: '3,5 milliards',
     desc: "La moitié de l'humanité connectée",
+    bub: '🌏 La moitié du monde ! Impressionnant ?',
     q: `Lucas, <strong>explique-leur</strong> ce que représente ce chiffre incroyable de <strong>3,5 milliards d'internautes</strong> atteint en 2016 — soit la moitié de la population mondiale connectée à internet, contre seulement quelques milliers en 1991 !`
   },
   {
@@ -205,6 +216,7 @@ const EVENTS = [
     color: '#f97316',
     title: 'IA, Cloud & VR',
     desc: "L'internet du futur",
+    bub: '✨ À vous d\'écrire la suite !',
     q: `De 1969 à aujourd'hui, le web n'a cessé d'évoluer… mais <strong>la suite</strong>, c'est <strong>vous</strong> qui allez l'écrire. 🚀 <em>À vous d'inventer le futur !</em>`
   }
 ];
@@ -357,8 +369,7 @@ function showQuestion(i) {
   qText.classList.remove('q-placeholder');
   qText.innerHTML = EVENTS[i].q;
   // Small robot bubble
-  const isLast = i === EVENTS.length - 1;
-  rBub.textContent = isLast ? '✨ À vous d\'écrire la suite !' : '🎤 A toi de jouer Lucas!';
+  rBub.textContent = EVENTS[i].bub;
   rBub.classList.add('show');
 }
 
