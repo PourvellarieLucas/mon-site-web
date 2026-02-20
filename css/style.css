@@ -1206,15 +1206,14 @@ body.page-histoires footer {
   left: 0;
   right: 0;
   z-index: 50;
-  background: rgba(3,9,18,0.85);
-  backdrop-filter: blur(12px);
+  background: #030912;
   border-top-color: rgba(0,200,248,0.12);
   padding: 0.9rem 2rem;
 }
 body.page-histoires .footer-nav { margin-bottom: 0.4rem; }
-body.page-histoires .footer-nav a { color: rgba(220,232,245,0.45); }
+body.page-histoires .footer-nav a { color: rgba(220,232,245,0.6); }
 body.page-histoires .footer-nav a:hover { color: var(--acc); }
-body.page-histoires .footer-copy { opacity: 0.35; }
+body.page-histoires .footer-copy { opacity: 0.5; }
 
 
 
