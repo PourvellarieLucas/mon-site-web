@@ -854,10 +854,10 @@
 ══════════════════════════════════════════════════════ */
 
 /* Mise en page plein écran – scopée à cette page */
-html:has(body.page-histoires) { height: 100%; overflow: hidden; }
+html:has(body.page-histoires) { min-height: 100%; }
 body.page-histoires {
-  overflow: hidden;
-  height: 100%;
+  overflow-x: hidden;
+  min-height: 100vh;
   --bg:    #030912;
   --bg2:   #071428;
   --muted: #3a6080;
@@ -1201,14 +1201,8 @@ body.page-histoires {
 .btn-restart:hover { background: rgba(0,200,248,.18); }
 
 body.page-histoires footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 50;
   background: #030912;
   border-top-color: rgba(0,200,248,0.12);
-  padding: 0.9rem 2rem;
 }
 body.page-histoires .footer-nav { margin-bottom: 0.4rem; }
 body.page-histoires .footer-nav a { color: rgba(220,232,245,0.6); }
